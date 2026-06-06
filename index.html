@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AMMAR.GG | لاعب محترف سوداني</title>
+  <link rel="icon" type="image/png" href="./Ammar__4_-removebg-preview.png">
+  <link rel="apple-touch-icon" href="./Ammar__4_-removebg-preview.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -1049,11 +1051,64 @@
       gap: 10px
     }
 
-    .pl-team-logo {
+    .pl-team-dot {
       width: 26px;
       height: 26px;
-      object-fit: contain;
-      flex-shrink: 0
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative
+    }
+
+    .pl-team-dot span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--dot-color, var(--c-cyan));
+      box-shadow: 0 0 10px var(--dot-color, var(--c-cyan)), 0 0 20px rgba(0, 0, 0, .3);
+      animation: teamDotPulse 2s ease-in-out infinite;
+      animation-delay: var(--dot-delay, 0s)
+    }
+
+    .pl-team-dot::before {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1px solid var(--dot-color, var(--c-cyan));
+      opacity: .3;
+      animation: teamDotRing 2s ease-in-out infinite;
+      animation-delay: var(--dot-delay, 0s)
+    }
+
+    @keyframes teamDotPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1
+      }
+
+      50% {
+        transform: scale(.7);
+        opacity: .5
+      }
+    }
+
+    @keyframes teamDotRing {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: .3
+      }
+
+      50% {
+        transform: scale(1.4);
+        opacity: 0
+      }
     }
 
     .pl-team-name {
@@ -1838,35 +1893,184 @@
       transform: translateY(-8px)
     }
 
-    .news-img-wrap {
-      overflow: hidden;
-      aspect-ratio: 16/9;
+    .news-icon-area {
       position: relative;
-      background: linear-gradient(135deg, #000b1e, #001e3c)
-    }
-
-    .news-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: saturate(.8) brightness(.85);
-      transition: all .5s
-    }
-
-    .news-card:hover .news-img {
-      filter: saturate(1.2) brightness(1.05);
-      transform: scale(1.06)
-    }
-
-    .news-img-fallback {
-      width: 100%;
-      height: 100%;
-      min-height: 180px;
+      height: 180px;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: var(--nia-bg, linear-gradient(135deg, #000b1e, #001333, #001e3c))
+    }
+
+    .news-icon-area::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 80%, var(--nia-glow, rgba(0, 170, 255, .15)), transparent 70%);
+      pointer-events: none
+    }
+
+    .news-icon-area::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--nia-accent, var(--grad-blue));
+      box-shadow: 0 0 12px var(--nia-shadow, rgba(0, 170, 255, .4))
+    }
+
+    .news-icon-main {
       font-size: 5rem;
-      background: linear-gradient(135deg, #000b1e, #001e3c)
+      z-index: 2;
+      filter: drop-shadow(0 0 20px var(--nia-shadow, rgba(0, 170, 255, .5)));
+      animation: newsIconFloat 3s ease-in-out infinite;
+      animation-delay: var(--nia-delay, 0s)
+    }
+
+    .news-card:hover .news-icon-main {
+      animation: newsIconBounce .5s ease;
+      filter: drop-shadow(0 0 30px var(--nia-shadow, rgba(0, 170, 255, .7)))
+    }
+
+    .news-icon-ring {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 1px solid var(--nia-ring, rgba(0, 170, 255, .2));
+      animation: newsRingPulse 3s ease-in-out infinite;
+      animation-delay: var(--nia-delay, 0s)
+    }
+
+    .news-icon-ring:nth-child(2) {
+      width: 130px;
+      height: 130px;
+      animation-delay: calc(var(--nia-delay, 0s) + .5s);
+      opacity: .5
+    }
+
+    .news-icon-particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--nia-ring, rgba(0, 170, 255, .6));
+      animation: newsParticle 4s linear infinite;
+      opacity: 0
+    }
+
+    .news-icon-particle:nth-child(4) {
+      left: 20%;
+      top: 30%;
+      animation-delay: 0s
+    }
+
+    .news-icon-particle:nth-child(5) {
+      left: 75%;
+      top: 20%;
+      animation-delay: 1s
+    }
+
+    .news-icon-particle:nth-child(6) {
+      left: 40%;
+      top: 70%;
+      animation-delay: 2s
+    }
+
+    .news-icon-particle:nth-child(7) {
+      left: 85%;
+      top: 60%;
+      animation-delay: 3s
+    }
+
+    .news-icon-particle:nth-child(8) {
+      left: 10%;
+      top: 80%;
+      animation-delay: 1.5s
+    }
+
+    .news-icon-cat-label {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-family: 'Orbitron', monospace;
+      font-size: .9rem;
+      letter-spacing: 2px;
+      color: var(--nia-ring, var(--c-cyan));
+      background: rgba(0, 0, 0, .5);
+      border: 1px solid var(--nia-ring, rgba(0, 170, 255, .3));
+      padding: 3px 10px;
+      backdrop-filter: blur(8px);
+      clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px)100%, 0% 100%)
+    }
+
+    @keyframes newsIconFloat {
+
+      0%,
+      100% {
+        transform: translateY(0) scale(1)
+      }
+
+      50% {
+        transform: translateY(-8px) scale(1.05)
+      }
+    }
+
+    @keyframes newsIconBounce {
+      0% {
+        transform: scale(1)
+      }
+
+      30% {
+        transform: scale(1.25) rotate(5deg)
+      }
+
+      60% {
+        transform: scale(.95) rotate(-3deg)
+      }
+
+      100% {
+        transform: scale(1) rotate(0)
+      }
+    }
+
+    @keyframes newsRingPulse {
+
+      0%,
+      100% {
+        transform: scale(.8);
+        opacity: .3
+      }
+
+      50% {
+        transform: scale(1.2);
+        opacity: 0
+      }
+    }
+
+    @keyframes newsParticle {
+      0% {
+        opacity: 0;
+        transform: translateY(0) scale(0)
+      }
+
+      20% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1)
+      }
+
+      80% {
+        opacity: .5;
+        transform: translateY(-40px) scale(.5)
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-60px) scale(0)
+      }
     }
 
     .news-body {
@@ -2971,9 +3175,10 @@
               <tr class="champion-row">
                 <td class="pl-pos p1">1</td>
                 <td>
-                  <div class="pl-team-cell"><img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/60px-Arsenal_FC.svg.png"
-                      alt="Arsenal"><span class="pl-team-name">آرسنال 🏆</span></div>
+                  <div class="pl-team-cell">
+                    <div class="pl-team-dot" style="--dot-color:#ffd700;--dot-delay:0s"><span></span></div><span
+                      class="pl-team-name">آرسنال 🏆</span>
+                  </div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">27</td>
@@ -2984,9 +3189,10 @@
               <tr class="ucl-row">
                 <td class="pl-pos">2</td>
                 <td>
-                  <div class="pl-team-cell"><img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/60px-Manchester_City_FC_badge.svg.png"
-                      alt="City"><span class="pl-team-name">مان سيتي</span></div>
+                  <div class="pl-team-cell">
+                    <div class="pl-team-dot" style="--dot-color:#6ecfff;--dot-delay:0.15s"><span></span></div><span
+                      class="pl-team-name">مان سيتي</span>
+                  </div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">25</td>
@@ -2997,9 +3203,10 @@
               <tr class="ucl-row">
                 <td class="pl-pos">3</td>
                 <td>
-                  <div class="pl-team-cell"><img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/60px-Manchester_United_FC_crest.svg.png"
-                      alt="Utd"><span class="pl-team-name">مان يونايتد</span></div>
+                  <div class="pl-team-cell">
+                    <div class="pl-team-dot" style="--dot-color:#ff4466;--dot-delay:0.3s"><span></span></div><span
+                      class="pl-team-name">مان يونايتد</span>
+                  </div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">22</td>
@@ -3010,9 +3217,10 @@
               <tr class="ucl-row">
                 <td class="pl-pos">4</td>
                 <td>
-                  <div class="pl-team-cell"><img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/60px-Aston_Villa_FC_crest_%282016%29.svg.png"
-                      alt="Villa"><span class="pl-team-name">أستون فيلا</span></div>
+                  <div class="pl-team-cell">
+                    <div class="pl-team-dot" style="--dot-color:#7b3f9e;--dot-delay:0.45s"><span></span></div><span
+                      class="pl-team-name">أستون فيلا</span>
+                  </div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">22</td>
@@ -3023,9 +3231,10 @@
               <tr class="ucl-row">
                 <td class="pl-pos">5</td>
                 <td>
-                  <div class="pl-team-cell"><img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Liverpool_FC.svg/60px-Liverpool_FC.svg.png"
-                      alt="LFC"><span class="pl-team-name">ليفربول</span></div>
+                  <div class="pl-team-cell">
+                    <div class="pl-team-dot" style="--dot-color:#ff6b6b;--dot-delay:0.6s"><span></span></div><span
+                      class="pl-team-name">ليفربول</span>
+                  </div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">20</td>
@@ -3036,9 +3245,10 @@
               <tr class="europa-row">
                 <td class="pl-pos">6</td>
                 <td>
-                  <div class="pl-team-cell"><img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Chelsea_FC.svg/60px-Chelsea_FC.svg.png"
-                      alt="Chelsea"><span class="pl-team-name">تشيلسي</span></div>
+                  <div class="pl-team-cell">
+                    <div class="pl-team-dot" style="--dot-color:#0055ff;--dot-delay:0.75s"><span></span></div><span
+                      class="pl-team-name">تشيلسي</span>
+                  </div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">18</td>
@@ -3049,9 +3259,10 @@
               <tr>
                 <td class="pl-pos">7</td>
                 <td>
-                  <div class="pl-team-cell"><img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/60px-Tottenham_Hotspur.svg.png"
-                      alt="Spurs"><span class="pl-team-name">توتنهام</span></div>
+                  <div class="pl-team-cell">
+                    <div class="pl-team-dot" style="--dot-color:#ffffff;--dot-delay:0.9s"><span></span></div><span
+                      class="pl-team-name">توتنهام</span>
+                  </div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">16</td>
@@ -3062,9 +3273,10 @@
               <tr>
                 <td class="pl-pos">8</td>
                 <td>
-                  <div class="pl-team-cell"><img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Nottingham_Forest_FC_logo.svg/60px-Nottingham_Forest_FC_logo.svg.png"
-                      alt="Forest"><span class="pl-team-name">نوتنغهام فورست</span></div>
+                  <div class="pl-team-cell">
+                    <div class="pl-team-dot" style="--dot-color:#ff3300;--dot-delay:1.05s"><span></span></div><span
+                      class="pl-team-name">نوتنغهام فورست</span>
+                  </div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">14</td>
@@ -3500,7 +3712,8 @@
         <span class="sec-tag">// LIVE & RECENT MATCHES</span>
         <h2 class="sec-title">المباريات <span class="hl">الحية والحديثة</span></h2>
         <div class="sec-line"></div>
-        <p class="sec-desc">بيانات مباشرة • كأس العالم 2026 • مباريات ودية اليوم 6 يونيو 2026 • دوريات أوروبا</p>
+        <p class="sec-desc">بيانات مباشرة • كأس العالم 2026 • مباريات ودية اليوم <span id="friendly-date-header">6 يونيو
+            2026</span> • دوريات أوروبا</p>
       </div>
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px" data-r>
         <div class="match-tabs-row" style="margin-bottom:0;flex:1">
@@ -3704,6 +3917,40 @@
     };
     function arabicName(n) { return ARABIC_TEAMS[n] || n }
 
+    const TEAM_FLAGS = {
+      'Paraguay': 'py', 'Nicaragua': 'ni', 'Saudi Arabia': 'sa', 'Puerto Rico': 'pr',
+      'Ireland': 'ie', 'Canada': 'ca', 'Haiti': 'ht', 'Peru': 'pe',
+      'Palestine': 'ps', 'Kyrgyzstan': 'kg', 'Belgium': 'be', 'Tunisia': 'tn',
+      'Portugal': 'pt', 'Chile': 'cl', 'Romania': 'ro', 'Wales': 'gb-wls',
+      'Germany': 'de', 'USA': 'us', 'United States': 'us', 'Australia': 'au',
+      'Switzerland': 'ch', 'Bosnia and Herzegovina': 'ba', 'Panama': 'pa',
+      'England': 'gb-eng', 'New Zealand': 'nz', 'Qatar': 'qa', 'El Salvador': 'sv',
+      'Scotland': 'gb-sct', 'Bolivia': 'bo', 'Cape Verde': 'cv', 'Bermuda': 'bm',
+      'Mexico': 'mx', 'South Africa': 'za', 'Brazil': 'br', 'Morocco': 'ma',
+      'Egypt': 'eg', 'Spain': 'es', 'France': 'fr', 'Senegal': 'sn',
+      'Argentina': 'ar', 'Algeria': 'dz', 'Jordan': 'jo', 'Uruguay': 'uy',
+      'Colombia': 'co', 'Ghana': 'gh', 'Croatia': 'hr', 'Norway': 'no',
+      'Iraq': 'iq', 'Italy': 'it', 'Netherlands': 'nl', 'Sweden': 'se',
+      'Ukraine': 'ua', 'Poland': 'pl', 'Turkey': 'tr', 'Denmark': 'dk',
+      'Austria': 'at', 'Uzbekistan': 'uz', 'Costa Rica': 'cr', 'Honduras': 'hn',
+      'Jamaica': 'jm', 'Sudan': 'sd', 'Libya': 'ly', 'Mauritania': 'mr',
+      'Somalia': 'so', 'Djibouti': 'dj', 'Comoros': 'km', 'UAE': 'ae',
+      'United Arab Emirates': 'ae', 'Japan': 'jp', 'South Korea': 'kr',
+      'Iran': 'ir', 'Nigeria': 'ng', 'Cameroon': 'cm', 'Ivory Coast': 'ci',
+      'Cote d\'Ivoire': 'ci', 'Northern Ireland': 'gb-nir', 'Bulgaria': 'bg',
+      'Greece': 'gr', 'Finland': 'fi', 'Iceland': 'is', 'Czech Republic': 'cz',
+      'Slovakia': 'sk', 'Hungary': 'hu', 'Syria': 'sy', 'Lebanon': 'lb',
+      'Oman': 'om', 'Bahrain': 'bh', 'Kuwait': 'kw', 'Yemen': 'ye', 'Cape Verde': 'cv'
+    };
+    function getTeamBadge(teamName) {
+      if (!teamName) return '';
+      const name = teamName.trim();
+      if (TEAM_FLAGS[name]) {
+        return `https://flagcdn.com/w80/${TEAM_FLAGS[name]}.png`;
+      }
+      return '';
+    }
+
     function formatDateAr(dateStr) {
       try { const d = new Date(dateStr); return d.toLocaleDateString('ar-EG', { day: 'numeric', month: 'long', year: 'numeric' }) } catch (e) { return dateStr }
     }
@@ -3769,8 +4016,8 @@
       const isFinished = evStatus === 'finished';
       const statusCls = isLive ? 'status-live' : isFinished ? 'status-finished' : 'status-upcoming';
       const statusLabel = isLive ? '● مباشر' : isFinished ? '✓ انتهت' : '⟳ قادمة';
-      const hBadge = ev.strHomeTeamBadge || ev.homeBadge || '';
-      const aBadge = ev.strAwayTeamBadge || ev.awayBadge || '';
+      const hBadge = ev.strHomeTeamBadge || ev.homeBadge || getTeamBadge(ev.strHomeTeam);
+      const aBadge = ev.strAwayTeamBadge || ev.awayBadge || getTeamBadge(ev.strAwayTeam);
       const logoClass = isFlag ? 'lmc-logo flag-logo' : 'lmc-logo';
       const hLogoHtml = hBadge ? `<img class="${logoClass}" src="${hBadge}" alt="${home}" onerror="this.style.opacity='.3'">` : `<div style="font-size:3rem">⚽</div>`;
       const aLogoHtml = aBadge ? `<img class="${logoClass}" src="${aBadge}" alt="${away}" onerror="this.style.opacity='.3'">` : `<div style="font-size:3rem">⚽</div>`;
@@ -3791,23 +4038,59 @@
           return;
         }
         if (tab === 'friendly') {
-          // Try TheSportsDB day endpoint for June 6, 2026
+          const today = new Date();
+          const yyyy = today.getFullYear();
+          const mm = String(today.getMonth() + 1).padStart(2, '0');
+          const dd = String(today.getDate()).padStart(2, '0');
+          const todayStr = `${yyyy}-${mm}-${dd}`;
+
           let loaded = false;
           try {
-            const r = await fetch(`${SPORTSDB}/eventsday.php?d=2026-06-06&s=Soccer`);
+            const r = await fetch(`${SPORTSDB}/eventsday.php?d=${todayStr}&s=Soccer`);
             const d = await r.json();
             if (d.events && d.events.length > 0) {
-              // Filter for friendlies/internationals
               events = d.events.filter(e => {
                 const lg = (e.strLeague || '').toLowerCase();
-                return lg.includes('friendly') || lg.includes('international') || lg.includes('national');
+                const isFriendly = lg.includes('friendly') || lg.includes('international') || lg.includes('national') || lg.includes('world cup');
+                const isHomeNational = TEAM_FLAGS[e.strHomeTeam] !== undefined;
+                const isAwayNational = TEAM_FLAGS[e.strAwayTeam] !== undefined;
+                return isFriendly && (isHomeNational || isAwayNational);
               });
-              if (!events.length) events = d.events.slice(0, 15);
-              loaded = true;
+              if (events.length > 0) {
+                loaded = true;
+              }
             }
           } catch (e) { console.warn('TheSportsDB day API failed, using local data') }
-          if (!loaded) events = TODAY_FRIENDLIES_JUN6;
-          renderMatchList(events, 'مباريات ودية دولية — 6 يونيو 2026', '🤝', true, container);
+
+          if (!loaded) {
+            events = TODAY_FRIENDLIES_JUN6.map(ev => ({
+              ...ev,
+              dateEvent: todayStr
+            }));
+          }
+
+          window._friendlyMatchesSummary = events.map(ev => {
+            const home = arabicName(ev.strHomeTeam || '');
+            const away = arabicName(ev.strAwayTeam || '');
+            const hs = ev.intHomeScore;
+            const as_ = ev.intAwayScore;
+            const status = parseStatus(ev);
+            if (status === 'finished') {
+              return `✓ ${home} ${hs}-${as_} ${away}`;
+            } else if (status === 'live') {
+              return `🔴 ${home} ${hs}-${as_} ${away} (مباشر)`;
+            } else {
+              const time = ev.strTime ? ev.strTime.slice(0, 5) : 'غير محدد';
+              return `⟳ ${home} vs ${away} (${time})`;
+            }
+          }).join(' | ');
+
+          const dateHeader = document.getElementById('friendly-date-header');
+          if (dateHeader) {
+            dateHeader.textContent = formatDateAr(todayStr);
+          }
+
+          renderMatchList(events, `مباريات ودية دولية — ${formatDateAr(todayStr)}`, '🤝', true, container);
           return;
         }
         const ids = { epl: '4328', ucl: '4480' };
@@ -3843,9 +4126,64 @@
       container.innerHTML = events.map(ev => makeMatchCard(ev, label, icon, isFlag)).join('');
     }
 
+    async function initFriendlyMatches() {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      const todayStr = `${yyyy}-${mm}-${dd}`;
+
+      let events = [];
+      let loaded = false;
+      try {
+        const r = await fetch(`${SPORTSDB}/eventsday.php?d=${todayStr}&s=Soccer`);
+        const d = await r.json();
+        if (d.events && d.events.length > 0) {
+          events = d.events.filter(e => {
+            const lg = (e.strLeague || '').toLowerCase();
+            const isFriendly = lg.includes('friendly') || lg.includes('international') || lg.includes('national') || lg.includes('world cup');
+            const isHomeNational = TEAM_FLAGS[e.strHomeTeam] !== undefined;
+            const isAwayNational = TEAM_FLAGS[e.strAwayTeam] !== undefined;
+            return isFriendly && (isHomeNational || isAwayNational);
+          });
+          if (events.length > 0) loaded = true;
+        }
+      } catch (e) { console.warn('Pre-loading friendly matches failed') }
+
+      if (!loaded) {
+        events = TODAY_FRIENDLIES_JUN6.map(ev => ({
+          ...ev,
+          dateEvent: todayStr
+        }));
+      }
+
+      window._friendlyMatchesSummary = events.map(ev => {
+        const home = arabicName(ev.strHomeTeam || '');
+        const away = arabicName(ev.strAwayTeam || '');
+        const hs = ev.intHomeScore;
+        const as_ = ev.intAwayScore;
+        const status = parseStatus(ev);
+        if (status === 'finished') {
+          return `✓ ${home} ${hs}-${as_} ${away}`;
+        } else if (status === 'live') {
+          return `🔴 ${home} ${hs}-${as_} ${away} (مباشر)`;
+        } else {
+          const time = ev.strTime ? ev.strTime.slice(0, 5) : 'غير محدد';
+          return `⟳ ${home} vs ${away} (${time})`;
+        }
+      }).join(' | ');
+
+      const dateHeader = document.getElementById('friendly-date-header');
+      if (dateHeader) {
+        dateHeader.textContent = formatDateAr(todayStr);
+      }
+    }
+
     let currentTab = 'wc';
     document.querySelectorAll('.mtab').forEach(btn => { btn.addEventListener('click', function () { document.querySelectorAll('.mtab').forEach(b => b.classList.remove('active')); this.classList.add('active'); currentTab = this.dataset.tab; loadMatches(currentTab) }) });
     document.getElementById('refreshBtn').addEventListener('click', () => loadMatches(currentTab));
+
+    initFriendlyMatches();
     loadMatches('wc');
 
     // ══════════════════════════════════════════
@@ -3865,6 +4203,49 @@
     ];
 
     const NEWS_ICONS = ['⚽', '🏆', '🔄', '⭐', '🌍', '🏅', '🎯', '🔥', '📊'];
+
+    // ── News icon classification via Puter AI ──
+    const NEWS_ICON_MAP = {
+      transfer: { icon: '🔄', label: 'انتقالات', bg: 'linear-gradient(135deg, #0a0020, #1a0040, #0a0020)', glow: 'rgba(160,80,255,.15)', accent: 'linear-gradient(90deg,#a050ff,#6020cc)', shadow: 'rgba(160,80,255,.5)', ring: 'rgba(160,80,255,.3)' },
+      worldcup: { icon: '🏆', label: 'كأس العالم', bg: 'linear-gradient(135deg, #1a1000, #2a1800, #1a1000)', glow: 'rgba(255,215,0,.15)', accent: 'linear-gradient(90deg,#ffd700,#ff8c00)', shadow: 'rgba(255,215,0,.5)', ring: 'rgba(255,215,0,.3)' },
+      result: { icon: '⚽', label: 'نتائج', bg: 'linear-gradient(135deg, #000b1e, #001333, #000b1e)', glow: 'rgba(0,170,255,.15)', accent: 'linear-gradient(90deg,#00aaff,#00ffea)', shadow: 'rgba(0,170,255,.5)', ring: 'rgba(0,170,255,.3)' },
+      injury: { icon: '🏥', label: 'إصابات', bg: 'linear-gradient(135deg, #1a0005, #2a000a, #1a0005)', glow: 'rgba(255,50,80,.15)', accent: 'linear-gradient(90deg,#ff3355,#ff6b6b)', shadow: 'rgba(255,50,80,.5)', ring: 'rgba(255,50,80,.3)' },
+      goal: { icon: '🎯', label: 'أهداف', bg: 'linear-gradient(135deg, #001a0a, #002a10, #001a0a)', glow: 'rgba(0,255,136,.15)', accent: 'linear-gradient(90deg,#00ff88,#00cc66)', shadow: 'rgba(0,255,136,.5)', ring: 'rgba(0,255,136,.3)' },
+      lineup: { icon: '📋', label: 'تشكيلة', bg: 'linear-gradient(135deg, #0a0a1e, #141430, #0a0a1e)', glow: 'rgba(100,140,255,.15)', accent: 'linear-gradient(90deg,#648cff,#4060dd)', shadow: 'rgba(100,140,255,.5)', ring: 'rgba(100,140,255,.3)' },
+      award: { icon: '🥇', label: 'جوائز', bg: 'linear-gradient(135deg, #1a1500, #2a2000, #1a1500)', glow: 'rgba(255,200,0,.15)', accent: 'linear-gradient(90deg,#ffc800,#ffaa00)', shadow: 'rgba(255,200,0,.5)', ring: 'rgba(255,200,0,.3)' },
+      breaking: { icon: '🔥', label: 'عاجل', bg: 'linear-gradient(135deg, #1a0500, #2a0800, #1a0500)', glow: 'rgba(255,100,0,.2)', accent: 'linear-gradient(90deg,#ff6400,#ff3300)', shadow: 'rgba(255,100,0,.6)', ring: 'rgba(255,100,0,.4)' },
+      stats: { icon: '📊', label: 'إحصائيات', bg: 'linear-gradient(135deg, #000a1a, #001530, #000a1a)', glow: 'rgba(0,200,200,.15)', accent: 'linear-gradient(90deg,#00c8c8,#0088aa)', shadow: 'rgba(0,200,200,.5)', ring: 'rgba(0,200,200,.3)' },
+    };
+
+    async function classifyNewsWithAI(newsItems) {
+      try {
+        const titles = newsItems.map((n, i) => `${i}: ${n.title}`).join('\n');
+        const resp = await puter.ai.chat(
+          `أنت مصنف أخبار كرة قدم. صنف كل خبر لإحدى الفئات التالية فقط: transfer, worldcup, result, injury, goal, lineup, award, breaking, stats\nأعطني الرد كـ JSON array فقط بدون أي نص إضافي. مثال: ["transfer","worldcup","result"]\n\nالأخبار:\n${titles}`,
+          { model: 'claude-sonnet-4-20250514' }
+        );
+        const text = typeof resp === 'string' ? resp : (resp?.message?.content || resp?.text || '');
+        const match = text.match(/\[.*\]/s);
+        if (match) {
+          const cats = JSON.parse(match[0]);
+          return cats.map(c => NEWS_ICON_MAP[c] || NEWS_ICON_MAP.result);
+        }
+      } catch (e) { console.warn('AI classification failed:', e) }
+      return null;
+    }
+
+    function classifyNewsFallback(title) {
+      const t = (title || '').toLowerCase();
+      if (t.includes('صفقة') || t.includes('انتقال') || t.includes('transfer') || t.includes('يضم') || t.includes('ينضم') || t.includes('رفض') || t.includes('عرض') || t.includes('signing')) return NEWS_ICON_MAP.transfer;
+      if (t.includes('كأس العالم') || t.includes('world cup') || t.includes('مونديال') || t.includes('2026')) return NEWS_ICON_MAP.worldcup;
+      if (t.includes('إصاب') || t.includes('injury') || t.includes('غياب')) return NEWS_ICON_MAP.injury;
+      if (t.includes('هدف') || t.includes('goal') || t.includes('سجل') || t.includes('يسجل')) return NEWS_ICON_MAP.goal;
+      if (t.includes('تشكيل') || t.includes('قائم') || t.includes('lineup')) return NEWS_ICON_MAP.lineup;
+      if (t.includes('جائزة') || t.includes('أفضل') || t.includes('award') || t.includes('الكرة الذهبية')) return NEWS_ICON_MAP.award;
+      if (t.includes('عاجل') || t.includes('breaking') || t.includes('رسمي')) return NEWS_ICON_MAP.breaking;
+      if (t.includes('إحصائ') || t.includes('أرقام') || t.includes('stat') || t.includes('معدل')) return NEWS_ICON_MAP.stats;
+      return NEWS_ICON_MAP.result;
+    }
 
     function extractNewsImage(item) {
       if (item.thumbnail && typeof item.thumbnail === 'string' && item.thumbnail.startsWith('http')) return item.thumbnail;
@@ -3912,7 +4293,7 @@
       }
       if (!items.length) items = NEWS_FALLBACK;
       window._allNews = items;
-      renderNews(items);
+      await renderNews(items);
     }
 
     function detectCategory(title) {
@@ -3922,18 +4303,31 @@
       return 'results';
     }
 
-    function renderNews(items) {
+    async function renderNews(items) {
       const grid = document.getElementById('newsGrid');
       if (!items || !items.length) { grid.innerHTML = '<div class="news-loading">لا توجد أخبار متاحة</div>'; return }
-      grid.innerHTML = items.slice(0, 9).map((item, i) => {
-        const icon = NEWS_ICONS[i % NEWS_ICONS.length];
+      const sliced = items.slice(0, 9);
+      // Try AI classification first, fallback to keyword matching
+      let classifications = await classifyNewsWithAI(sliced);
+      if (!classifications) {
+        classifications = sliced.map(item => classifyNewsFallback(item.title));
+      }
+      grid.innerHTML = sliced.map((item, i) => {
+        const cls = classifications[i] || NEWS_ICON_MAP.result;
         const dateStr = item.pubDate ? new Date(item.pubDate).toLocaleDateString('ar-EG', { day: 'numeric', month: 'long' }) : '';
-        const hasImg = item.thumbnail && item.thumbnail.startsWith('http');
-        const imgHtml = hasImg
-          ? `<img src="${item.thumbnail}" alt="" class="news-img" loading="lazy" onerror="this.parentElement.innerHTML='<div class=news-img-fallback>${icon}</div>'">`
-          : `<div class="news-img-fallback">${icon}</div>`;
+        const delay = (i * 0.2).toFixed(1);
         return `<div class="news-card" data-ncat="${item.category || 'results'}" data-r>
-<div class="news-img-wrap">${imgHtml}</div>
+<div class="news-icon-area" style="--nia-bg:${cls.bg};--nia-glow:${cls.glow};--nia-accent:${cls.accent};--nia-shadow:${cls.shadow};--nia-ring:${cls.ring};--nia-delay:${delay}s">
+  <div class="news-icon-ring"></div>
+  <div class="news-icon-ring"></div>
+  <span class="news-icon-main">${cls.icon}</span>
+  <span class="news-icon-particle"></span>
+  <span class="news-icon-particle"></span>
+  <span class="news-icon-particle"></span>
+  <span class="news-icon-particle"></span>
+  <span class="news-icon-particle"></span>
+  <span class="news-icon-cat-label">${cls.label}</span>
+</div>
 <div class="news-body">
   <span class="news-source-badge">${item.source || 'كرة القدم'}</span>
   <div class="news-meta"><span>📅 ${dateStr}</span></div>
@@ -3972,15 +4366,21 @@
     let chatHistory = [];
     let isSending = false;
 
-    const SYSTEM_PROMPT = `أنت "كوتش فوتبول AI"، مساعد كرة قدم ذكي لموقع عمار ياسر، لاعب محترف سوداني من الخرطوم.
+    function getSystemPrompt() {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      const todayStr = `${yyyy}-${mm}-${dd}`;
+      const friendlySummary = window._friendlyMatchesSummary || '✓ بلجيكا 5-0 تونس | السعودية 3-0 بورتو ريكو | 🔴 البرتغال 2-0 تشيلي (مباشر) | ألمانيا 1-1 USA (مباشر)';
+
+      return `أنت "كوتش فوتبول AI"، مساعد كرة قدم ذكي لموقع عمار ياسر، لاعب محترف سوداني من الخرطوم.
 
 🎯 تخصصك: كرة القدم (نتائج، لاعبون، أندية، دوريات، كأس العالم، مباريات اليوم).
 
-📋 معلوماتك المحدّثة (يونيو 2026):
-- مباريات ودية اليوم 6 يونيو 2026:
-  ✓ باراغواي 4-0 نيكاراغوا | السعودية 3-0 بورتو ريكو | أيرلندا 1-1 كندا | هايتي 1-2 بيرو | فلسطين 0-0 قيرغيزستان | بلجيكا 5-0 تونس
-  🔴 البرتغال 2-0 تشيلي (مباشر) | رومانيا 2-1 ويلز (مباشر) | ألمانيا 1-1 الولايات المتحدة (مباشر) | أستراليا 0-1 سويسرا (مباشر) | البوسنة 1-0 بنما (مباشر)
-  ⟳ إنجلترا vs نيوزيلندا | قطر vs السلفادور | اسكتلندا vs بوليفيا | الرأس الأخضر vs برمودا (23:00)
+📋 معلوماتك المحدّثة (اليوم: ${formatDateAr(todayStr)}):
+- مباريات ودية اليوم بين المنتخبات استعداداً لكأس العالم 2026:
+  ${friendlySummary}
 - كأس العالم 2026: 11 يونيو – 19 يوليو، USA+كندا+المكسيك، 48 منتخب، 12 مجموعة
 - الافتتاح: المكسيك vs جنوب أفريقيا، الأزتيكي، 11 يونيو
 - آرسنال بطل الدوري الإنجليزي 2025-26 بـ89 نقطة
@@ -3991,6 +4391,7 @@
 
 🔍 لأسئلة خارج الكورة تماماً: أجب بـ ##GOOGLE##search query## فقط.
 💬 أسلوبك: عربي حماسي، إيموجي باعتدال، إجابات مختصرة (3-5 جمل).`;
+    }
 
     clearChat.addEventListener('click', () => {
       chatHistory = [];
@@ -4053,7 +4454,7 @@
     // Normalize chatHistory messages for Puter.js (ensure content is always a string)
     function buildPuterMessages() {
       return [
-        { role: 'system', content: SYSTEM_PROMPT },
+        { role: 'system', content: getSystemPrompt() },
         ...chatHistory.map(m => ({
           role: m.role,
           content: Array.isArray(m.content)
@@ -4116,9 +4517,10 @@
 
         // Smart Arabic fallbacks
         const low = userMsg.toLowerCase();
+        const friendlySummary = window._friendlyMatchesSummary || 'لا توجد مباريات ودية مسجلة حالياً.';
         const fallbacks = [
-          [['مباريات اليوم', 'اليوم', 'نتائج اليوم', 'june 6', '6 يونيو'],
-            'نتائج اليوم 6 يونيو 2026 🔴\n✓ بلجيكا 5-0 تونس | باراغواي 4-0 نيكاراغوا | السعودية 3-0 بورتو ريكو\n🔴 مباشر: البرتغال 2-0 تشيلي | ألمانيا 1-1 USA | البوسنة 1-0 بنما\n⟳ قادم: إنجلترا vs نيوزيلندا | قطر vs السلفادور (23:00)'],
+          [['مباريات اليوم', 'اليوم', 'نتائج اليوم', 'ودية', 'الودية', 'الوديات'],
+          `نتائج وجدول مباريات اليوم الودية استعداداً لكأس العالم 2026 🔴:\n${friendlySummary.split(' | ').join('\n')}`],
           [['مصر', 'egypt', 'فراعنة', 'صلاح'], 'مصر في المجموعة G مع بلجيكا 🇧🇪 وإيران 🇮🇷 ونيوزيلندا 🇳🇿! الفراعنة جاهزون بقيادة صلاح! 🇪🇬🔥'],
           [['أرجنتين', 'ميسي', 'argentina'], 'الأرجنتين حاملة اللقب ⭐⭐⭐ في المجموعة J مع الجزائر والنمسا والأردن! ميسي يسعى للثالثة! 🐐🏆'],
           [['سودان', '🇸🇩'], 'السودان 🇸🇩 لم يتأهل للمونديال 2026 للأسف، لكن عمار ياسر موجود يشجع! 💪🎮'],
