@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AMMAR.GG | لاعب محترف مصري</title>
+  <title>AMMAR.GG | لاعب محترف سوداني</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -12,13 +12,10 @@
     rel="stylesheet">
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <style>
-    /* ═══════════════════════════════════════════
-   ROOT VARIABLES - ELECTRIC BLUE GAMING THEME
-═══════════════════════════════════════════ */
     :root {
       --c-bg: #00050f;
       --c-bg2: #000b1e;
-      --c-card: rgba(0, 30, 70, 0.55);
+      --c-card: rgba(0, 30, 70, .55);
       --c-blue: #00aaff;
       --c-cyan: #00ffea;
       --c-electric: #0066ff;
@@ -26,20 +23,17 @@
       --c-orange: #ff6b00;
       --c-white: #e8f4ff;
       --c-muted: #4a7fa5;
-      --c-border: rgba(0, 170, 255, 0.3);
-      --c-border2: rgba(0, 255, 234, 0.2);
-      --glow-sm: 0 0 12px rgba(0, 170, 255, 0.5);
-      --glow-md: 0 0 25px rgba(0, 170, 255, 0.7), 0 0 50px rgba(0, 102, 255, 0.3);
-      --glow-lg: 0 0 40px rgba(0, 255, 234, 0.8), 0 0 80px rgba(0, 170, 255, 0.5), 0 0 160px rgba(0, 102, 255, 0.3);
-      --glow-gold: 0 0 25px rgba(255, 215, 0, 0.7), 0 0 50px rgba(255, 107, 0, 0.4);
+      --c-border: rgba(0, 170, 255, .3);
+      --c-border2: rgba(0, 255, 234, .2);
+      --glow-sm: 0 0 12px rgba(0, 170, 255, .5);
+      --glow-md: 0 0 25px rgba(0, 170, 255, .7), 0 0 50px rgba(0, 102, 255, .3);
+      --glow-lg: 0 0 40px rgba(0, 255, 234, .8), 0 0 80px rgba(0, 170, 255, .5), 0 0 160px rgba(0, 102, 255, .3);
+      --glow-gold: 0 0 25px rgba(255, 215, 0, .7), 0 0 50px rgba(255, 107, 0, .4);
       --grad-blue: linear-gradient(135deg, #00ffea 0%, #00aaff 40%, #0066ff 100%);
       --grad-gold: linear-gradient(135deg, #ffd700 0%, #ff6b00 100%);
-      --grad-card: linear-gradient(135deg, rgba(0, 170, 255, 0.08) 0%, rgba(0, 50, 120, 0.04) 100%);
-      --r1: 4px;
-      --r2: 8px;
+      --grad-card: linear-gradient(135deg, rgba(0, 170, 255, .08) 0%, rgba(0, 50, 120, .04) 100%)
     }
 
-    /* ═══════════════════════════════════════════ RESET */
     *,
     *::before,
     *::after {
@@ -102,21 +96,18 @@
       font-size: 1.5rem;
       line-height: 1.7;
       overflow-x: hidden;
-      direction: rtl;
+      direction: rtl
     }
 
-    /* ANIMATED BG GRID */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
-      background-image:
-        linear-gradient(rgba(0, 170, 255, .04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 170, 255, .04) 1px, transparent 1px);
+      background-image: linear-gradient(rgba(0, 170, 255, .04)1px, transparent 1px), linear-gradient(90deg, rgba(0, 170, 255, .04)1px, transparent 1px);
       background-size: 60px 60px;
       pointer-events: none;
       z-index: 0;
-      animation: gridShift 20s linear infinite;
+      animation: gridShift 20s linear infinite
     }
 
     @keyframes gridShift {
@@ -129,14 +120,13 @@
       }
     }
 
-    /* RADIAL GLOW BLOBS */
     .blob {
       position: fixed;
       border-radius: 50%;
       pointer-events: none;
       z-index: 0;
       filter: blur(80px);
-      opacity: .15;
+      opacity: .15
     }
 
     .blob-1 {
@@ -182,7 +172,6 @@
       }
     }
 
-    /* ═══════════════════════════════════════════ CURSOR */
     #cursor {
       position: fixed;
       width: 22px;
@@ -214,7 +203,6 @@
       opacity: .4
     }
 
-    /* ═══════════════════════════════════════════ HEADER */
     header {
       position: fixed;
       top: 0;
@@ -229,7 +217,7 @@
       background: rgba(0, 5, 15, .8);
       backdrop-filter: blur(24px);
       border-bottom: 1px solid var(--c-border);
-      animation: slideDown .8s cubic-bezier(.16, 1, .3, 1) both;
+      animation: slideDown .8s cubic-bezier(.16, 1, .3, 1) both
     }
 
     @keyframes slideDown {
@@ -255,7 +243,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       filter: drop-shadow(0 0 12px rgba(0, 170, 255, .8));
-      letter-spacing: 3px;
+      letter-spacing: 3px
     }
 
     .logo img {
@@ -280,9 +268,8 @@
       padding: 7px 16px;
       border: 1px solid transparent;
       transition: all .25s;
-      position: relative;
-      clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
-      letter-spacing: .5px;
+      clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px)100%, 0% 100%);
+      letter-spacing: .5px
     }
 
     .nav-link:hover,
@@ -300,9 +287,9 @@
       padding: 9px 24px;
       background: var(--grad-blue);
       color: #00050f;
-      clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+      clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px)100%, 0% 100%);
       transition: all .3s;
-      letter-spacing: .5px;
+      letter-spacing: .5px
     }
 
     .header-cta:hover {
@@ -326,14 +313,13 @@
       transition: .3s
     }
 
-    /* ═══════════════════════════════════════════ HERO */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       padding: 100px 40px 60px;
       position: relative;
-      overflow: hidden;
+      overflow: hidden
     }
 
     .hero-inner {
@@ -345,7 +331,7 @@
       gap: 60px;
       align-items: center;
       position: relative;
-      z-index: 2;
+      z-index: 2
     }
 
     .hero-left {
@@ -392,7 +378,7 @@
       padding: 6px 18px;
       margin-bottom: 22px;
       background: rgba(0, 255, 234, .05);
-      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px)100%, 0% 100%)
     }
 
     .hero-tag::before {
@@ -418,14 +404,14 @@
       font-size: clamp(5rem, 9vw, 10rem);
       font-weight: 900;
       line-height: .9;
-      background: var(--grad-blue);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 40px rgba(0, 170, 255, .6));
-      margin-bottom: 10px;
+      margin-bottom: 10px
     }
 
     .hero-name-glitch {
+      background: linear-gradient(135deg, #fff5a0 0%, #ffd700 40%, #ff6b00 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 20px rgba(255, 215, 0, .8)) drop-shadow(0 0 50px rgba(255, 107, 0, .5));
       position: relative
     }
 
@@ -436,9 +422,9 @@
       top: 0;
       right: 0;
       width: 100%;
-      background: var(--grad-blue);
+      background: linear-gradient(135deg, #fff5a0 0%, #ffd700 40%, #ff6b00 100%);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent
     }
 
     .hero-name-glitch::before {
@@ -537,9 +523,9 @@
       padding: 14px 36px;
       background: var(--grad-blue);
       color: #00050f;
-      clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
+      clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px)100%, 0% 100%);
       transition: all .3s;
-      display: inline-block;
+      display: inline-block
     }
 
     .btn-main:hover {
@@ -556,9 +542,9 @@
       background: transparent;
       color: var(--c-blue);
       border: 2px solid var(--c-blue);
-      clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
+      clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px)100%, 0% 100%);
       transition: all .3s;
-      display: inline-block;
+      display: inline-block
     }
 
     .btn-outline:hover {
@@ -567,7 +553,6 @@
       transform: translateY(-3px)
     }
 
-    /* STATS BAR */
     .hero-stats {
       display: flex;
       gap: 0;
@@ -581,7 +566,7 @@
       border-left: 1px solid var(--c-border);
       background: var(--grad-card);
       position: relative;
-      overflow: hidden;
+      overflow: hidden
     }
 
     .stat:last-child {
@@ -610,7 +595,7 @@
       font-weight: 900;
       color: var(--c-cyan);
       display: block;
-      text-shadow: var(--glow-sm);
+      text-shadow: var(--glow-sm)
     }
 
     .stat-l {
@@ -620,14 +605,13 @@
       text-transform: uppercase
     }
 
-    /* HERO RIGHT - PLAYER CARD */
     .player-card {
       background: var(--c-card);
       border: 1px solid var(--c-border);
       padding: 30px;
       position: relative;
       overflow: hidden;
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px)
     }
 
     .player-card::before {
@@ -670,7 +654,7 @@
       box-shadow: var(--glow-md);
       animation: avatarPulse 3s ease-in-out infinite;
       border: 3px solid rgba(0, 255, 234, .3);
-      flex-shrink: 0;
+      flex-shrink: 0
     }
 
     @keyframes avatarPulse {
@@ -700,7 +684,7 @@
       color: var(--c-cyan);
       padding: 3px 12px;
       margin-top: 5px;
-      clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px) 100%, 0% 100%);
+      clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px)100%, 0% 100%)
     }
 
     .skills-grid {
@@ -753,7 +737,7 @@
       gap: 8px;
       font-size: 1.2rem;
       padding: 10px 0;
-      border-top: 1px solid var(--c-border);
+      border-top: 1px solid var(--c-border)
     }
 
     .online-dot {
@@ -777,7 +761,6 @@
       }
     }
 
-    /* COUNTDOWN */
     .wc-countdown {
       background: rgba(255, 215, 0, .04);
       border: 1px solid rgba(255, 215, 0, .25);
@@ -785,7 +768,7 @@
       text-align: center;
       margin-top: 15px;
       position: relative;
-      overflow: hidden;
+      overflow: hidden
     }
 
     .wc-countdown::before {
@@ -842,7 +825,6 @@
       animation: blink 1s step-end infinite
     }
 
-    /* ═══════════════════════════════════════════ SECTIONS */
     .section {
       padding: 90px 40px;
       position: relative;
@@ -867,7 +849,7 @@
       color: var(--c-cyan);
       display: block;
       margin-bottom: 12px;
-      opacity: .9;
+      opacity: .9
     }
 
     .sec-title {
@@ -875,21 +857,21 @@
       font-size: clamp(2.8rem, 5vw, 5rem);
       font-weight: 900;
       color: white;
-      line-height: 1.1;
+      line-height: 1.1
     }
 
     .sec-title .hl {
       background: var(--grad-blue);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 15px rgba(0, 170, 255, .5));
+      filter: drop-shadow(0 0 15px rgba(0, 170, 255, .5))
     }
 
     .sec-title .hl-gold {
       background: var(--grad-gold);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 15px rgba(255, 215, 0, .5));
+      filter: drop-shadow(0 0 15px rgba(255, 215, 0, .5))
     }
 
     .sec-line {
@@ -911,7 +893,6 @@
       margin-top: 14px
     }
 
-    /* REVEAL */
     [data-r] {
       opacity: 0;
       transform: translateY(24px);
@@ -931,7 +912,6 @@
       transform: none
     }
 
-    /* ═══════════════════════════════════════════ PREMIER LEAGUE */
     #pl {
       background: linear-gradient(180deg, var(--c-bg), var(--c-bg2), var(--c-bg))
     }
@@ -948,7 +928,7 @@
       border: 1px solid var(--c-border);
       overflow: hidden;
       position: relative;
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px)
     }
 
     .pl-table-wrap::before {
@@ -967,7 +947,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid var(--c-border);
+      border-bottom: 1px solid var(--c-border)
     }
 
     .pl-table-title h3 {
@@ -986,7 +966,7 @@
       font-size: 1.1rem;
       font-family: 'Orbitron', monospace;
       color: #ff3355;
-      letter-spacing: 2px;
+      letter-spacing: 2px
     }
 
     .live-dot {
@@ -1024,7 +1004,7 @@
       letter-spacing: 1px;
       color: var(--c-muted);
       border-bottom: 1px solid var(--c-border);
-      background: rgba(0, 0, 0, .3);
+      background: rgba(0, 0, 0, .3)
     }
 
     .pl-table td {
@@ -1100,14 +1080,13 @@
       color: #ff4466
     }
 
-    /* PL CHAMPION BANNER */
     .champion-banner {
       background: var(--grad-card);
       border: 1px solid rgba(255, 215, 0, .3);
       padding: 25px;
       position: relative;
       overflow: hidden;
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px)
     }
 
     .champion-banner::before {
@@ -1157,8 +1136,7 @@
       font-family: 'Orbitron', monospace;
       font-size: 2.5rem;
       font-weight: 900;
-      color: white;
-      text-shadow: var(--glow-gold)
+      color: white
     }
 
     .champ-season {
@@ -1208,7 +1186,7 @@
       padding: 12px;
       background: rgba(0, 0, 0, .2);
       border: 1px solid var(--c-border);
-      transition: all .3s;
+      transition: all .3s
     }
 
     .pl-news-item:hover {
@@ -1232,7 +1210,6 @@
       font-size: 1.4rem
     }
 
-    /* NEXT SEASON BANNER */
     .next-season {
       margin-top: 15px;
       padding: 15px 20px;
@@ -1240,7 +1217,7 @@
       border: 1px solid var(--c-border);
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 12px
     }
 
     .ns-icon {
@@ -1259,11 +1236,10 @@
       font-size: 1.45rem
     }
 
-    /* ═══════════════════════════════════════════ WORLD CUP */
     #wc {
-      background: linear-gradient(180deg, var(--c-bg) 0%, rgba(30, 20, 0, .5) 50%, var(--c-bg) 100%);
+      background: linear-gradient(180deg, var(--c-bg)0%, rgba(30, 20, 0, .5)50%, var(--c-bg)100%);
       border-top: 1px solid rgba(255, 215, 0, .12);
-      border-bottom: 1px solid rgba(255, 215, 0, .12);
+      border-bottom: 1px solid rgba(255, 215, 0, .12)
     }
 
     .wc-kickoff {
@@ -1273,7 +1249,7 @@
       background: linear-gradient(135deg, rgba(255, 215, 0, .06), rgba(255, 107, 0, .03));
       border: 1px solid rgba(255, 215, 0, .2);
       position: relative;
-      overflow: hidden;
+      overflow: hidden
     }
 
     .wc-kickoff::before {
@@ -1306,13 +1282,12 @@
       font-size: 1.4rem
     }
 
-    /* Groups filter tabs */
     .groups-nav {
       display: flex;
       gap: 6px;
       flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 30px;
+      margin-bottom: 30px
     }
 
     .grp-tab {
@@ -1324,8 +1299,8 @@
       color: var(--c-muted);
       border: 1px solid var(--c-border);
       transition: all .25s;
-      clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
-      cursor: pointer;
+      clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px)100%, 0% 100%);
+      cursor: pointer
     }
 
     .grp-tab:hover,
@@ -1333,7 +1308,7 @@
       background: rgba(255, 215, 0, .1);
       color: var(--c-gold);
       border-color: rgba(255, 215, 0, .4);
-      box-shadow: var(--glow-gold);
+      box-shadow: var(--glow-gold)
     }
 
     .grp-tab.highlight {
@@ -1346,7 +1321,7 @@
     .groups-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 20px;
+      gap: 20px
     }
 
     .group-card {
@@ -1354,7 +1329,7 @@
       border: 1px solid rgba(255, 215, 0, .2);
       overflow: hidden;
       position: relative;
-      transition: all .4s;
+      transition: all .4s
     }
 
     .group-card::before {
@@ -1388,7 +1363,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(255, 215, 0, .1);
+      border-bottom: 1px solid rgba(255, 215, 0, .1)
     }
 
     .grp-letter {
@@ -1419,8 +1394,8 @@
       color: var(--c-cyan);
       border: 1px solid var(--c-border2);
       padding: 3px 8px;
-      clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px) 100%, 0% 100%);
-      background: rgba(0, 255, 234, .08);
+      clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px)100%, 0% 100%);
+      background: rgba(0, 255, 234, .08)
     }
 
     .grp-teams {
@@ -1433,42 +1408,12 @@
       gap: 10px;
       padding: 9px 10px;
       border: 1px solid transparent;
-      transition: all .25s;
-      position: relative;
+      transition: all .25s
     }
 
     .grp-team:hover {
       background: rgba(255, 255, 255, .04);
       border-color: rgba(255, 215, 0, .15)
-    }
-
-    .grp-team.host::before {
-      content: 'H';
-      position: absolute;
-      left: 4px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: .9rem;
-      color: var(--c-orange);
-      font-weight: 700;
-      font-family: 'Orbitron', monospace
-    }
-
-    .team-flag {
-      width: 36px;
-      height: 24px;
-      object-fit: cover;
-      border: 1px solid rgba(255, 255, 255, .1);
-      flex-shrink: 0;
-      border-radius: 2px
-    }
-
-    .team-flag.flag-emoji {
-      font-size: 2rem;
-      width: auto;
-      height: auto;
-      border: none;
-      line-height: 1
     }
 
     .team-flag-wrap {
@@ -1483,6 +1428,12 @@
       overflow: hidden
     }
 
+    .team-flag {
+      width: 36px;
+      height: 24px;
+      object-fit: cover
+    }
+
     .t-name {
       font-size: 1.35rem;
       font-weight: 700;
@@ -1490,44 +1441,138 @@
       flex: 1
     }
 
-    .t-name.egypt {
+    .t-name.featured-nation {
       color: var(--c-cyan);
       font-weight: 900
     }
 
-    .t-seed {
-      font-family: 'Orbitron', monospace;
-      font-size: 1rem;
-      color: var(--c-muted);
-      margin-right: auto
-    }
-
-    .t-host-badge {
-      font-size: 1rem;
-      color: var(--c-orange)
-    }
-
-    /* ═══════════════════════════════════════════ TOURNAMENT */
-    #tournament {
+    #matches {
       background: var(--c-bg)
     }
 
-    .matches-list {
+    .match-tabs-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 28px;
+      flex-wrap: wrap
+    }
+
+    .mtab {
+      font-family: 'Orbitron', monospace;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 9px 22px;
+      background: transparent;
+      color: var(--c-muted);
+      border: 1px solid rgba(0, 170, 255, .2);
+      cursor: pointer;
+      transition: all .25s;
+      clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px)100%, 0% 100%)
+    }
+
+    .mtab:hover,
+    .mtab.active {
+      background: rgba(0, 170, 255, .1);
+      color: var(--c-cyan);
+      border-color: var(--c-blue);
+      box-shadow: var(--glow-sm)
+    }
+
+    .mtab.wc-tab.active,
+    .mtab.wc-tab:hover {
+      background: rgba(255, 215, 0, .08);
+      color: var(--c-gold);
+      border-color: var(--c-gold);
+      box-shadow: var(--glow-gold)
+    }
+
+    .match-container {
       display: flex;
       flex-direction: column;
-      gap: 20px
+      gap: 18px
     }
 
-    .match-card {
+    .match-skeleton {
       background: var(--c-card);
       border: 1px solid var(--c-border);
-      overflow: hidden;
+      padding: 22px 30px;
       position: relative;
-      transition: all .4s;
-      backdrop-filter: blur(12px);
+      overflow: hidden;
+      border-radius: 2px
     }
 
-    .match-card::before {
+    .match-skeleton::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 20%, rgba(0, 170, 255, .05)50%, transparent 80%);
+      animation: shimmer 1.5s infinite
+    }
+
+    @keyframes shimmer {
+      from {
+        transform: translateX(-100%)
+      }
+
+      to {
+        transform: translateX(100%)
+      }
+    }
+
+    .sk-banner {
+      height: 16px;
+      width: 40%;
+      background: rgba(0, 170, 255, .08);
+      border-radius: 4px;
+      margin-bottom: 20px
+    }
+
+    .sk-teams {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 20px;
+      align-items: center;
+      margin-top: 10px
+    }
+
+    .sk-team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px
+    }
+
+    .sk-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(0, 170, 255, .08)
+    }
+
+    .sk-name {
+      height: 12px;
+      width: 70px;
+      background: rgba(0, 170, 255, .08);
+      border-radius: 4px
+    }
+
+    .sk-score {
+      height: 30px;
+      width: 70px;
+      background: rgba(0, 170, 255, .08);
+      border-radius: 4px
+    }
+
+    .lmc {
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      position: relative;
+      overflow: hidden;
+      transition: all .4s;
+      backdrop-filter: blur(12px)
+    }
+
+    .lmc::before {
       content: '';
       position: absolute;
       top: 0;
@@ -1538,110 +1583,135 @@
       box-shadow: var(--glow-sm)
     }
 
-    .match-card:hover {
-      border-color: var(--c-blue);
-      box-shadow: var(--glow-md);
-      transform: translateX(-4px)
+    .lmc.live-now {
+      border-color: rgba(255, 51, 85, .4)
     }
 
-    .match-banner {
-      padding: 10px 20px;
+    .lmc.live-now::before {
+      background: #ff3355;
+      box-shadow: 0 0 15px rgba(255, 51, 85, .6);
+      animation: livePulse 1s step-end infinite
+    }
+
+    .lmc:hover {
+      border-color: var(--c-blue);
+      box-shadow: var(--glow-md);
+      transform: translateX(-3px)
+    }
+
+    .lmc-banner {
+      padding: 10px 22px;
       background: rgba(0, 0, 0, .4);
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid var(--c-border);
-      font-size: 1.2rem;
+      font-size: 1.2rem
     }
 
-    .mb-league {
+    .lmc-league {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       color: var(--c-muted);
       font-family: 'Orbitron', monospace;
-      letter-spacing: 1px
+      letter-spacing: 1px;
+      font-size: 1.1rem
     }
 
-    .mb-status {
+    .lmc-league img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      border-radius: 2px
+    }
+
+    .lmc-status {
       font-family: 'Orbitron', monospace;
       font-size: 1.1rem;
       letter-spacing: 2px;
-      padding: 3px 10px;
-      clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+      padding: 3px 12px;
+      clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px)100%, 0% 100%)
     }
 
-    .mb-status.live {
+    .status-live {
       background: rgba(255, 51, 85, .2);
       color: #ff3355;
       border: 1px solid rgba(255, 51, 85, .4);
       animation: livePulse 1s step-end infinite
     }
 
-    .mb-status.upcoming {
+    .status-upcoming {
       background: rgba(0, 170, 255, .1);
       color: var(--c-blue);
       border: 1px solid var(--c-border)
     }
 
-    .mb-status.finished {
+    .status-finished {
       background: rgba(0, 255, 136, .1);
       color: #00ff88;
       border: 1px solid rgba(0, 255, 136, .3)
     }
 
-    .match-body {
+    .lmc-body {
       padding: 25px 30px;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      gap: 20px;
+      gap: 20px
     }
 
-    .m-team {
+    .lmc-team {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       text-align: center
     }
 
-    .m-team-logo {
-      width: 72px;
-      height: 72px;
+    .lmc-logo {
+      width: 70px;
+      height: 70px;
       object-fit: contain;
-      filter: drop-shadow(0 0 10px rgba(0, 170, 255, .3));
-      transition: filter .3s;
+      filter: drop-shadow(0 0 10px rgba(0, 170, 255, .25));
+      transition: filter .3s
     }
 
-    .match-card:hover .m-team-logo {
-      filter: drop-shadow(0 0 20px rgba(0, 170, 255, .7))
+    .lmc-logo.flag-logo {
+      border-radius: 4px;
+      object-fit: cover;
+      height: 48px;
+      width: 72px;
+      border: 1px solid rgba(255, 255, 255, .1)
     }
 
-    .m-team-name {
+    .lmc:hover .lmc-logo {
+      filter: drop-shadow(0 0 20px rgba(0, 170, 255, .6))
+    }
+
+    .lmc-name {
       font-family: 'Orbitron', monospace;
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-weight: 700;
       color: white;
       letter-spacing: .5px
     }
 
-    .m-center {
+    .lmc-center {
       text-align: center
     }
 
-    .m-vs {
+    .lmc-vs {
       font-family: 'Orbitron', monospace;
       font-size: 1.8rem;
       font-weight: 900;
       background: var(--grad-blue);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      display: block;
-      line-height: 1;
+      display: block
     }
 
-    .m-score {
+    .lmc-score {
       font-family: 'Orbitron', monospace;
       font-size: 3.5rem;
       font-weight: 900;
@@ -1649,40 +1719,108 @@
       text-shadow: var(--glow-md);
       display: block;
       line-height: 1;
-      margin-bottom: 4px;
+      margin-bottom: 4px
     }
 
-    .m-time {
+    .lmc-time {
       font-family: 'Orbitron', monospace;
       font-size: 1.8rem;
       color: var(--c-cyan);
       text-shadow: var(--glow-sm)
     }
 
-    .m-date {
-      font-size: 1.2rem;
+    .lmc-meta {
+      font-size: 1.15rem;
       color: var(--c-muted);
-      margin-top: 4px;
+      margin-top: 5px;
       letter-spacing: 1px
     }
 
-    .m-group {
+    .lmc-minute {
       font-family: 'Orbitron', monospace;
-      font-size: 1rem;
-      letter-spacing: 2px;
-      color: var(--c-muted);
-      margin-top: 6px;
+      font-size: 1.1rem;
+      color: #ff3355;
+      background: rgba(255, 51, 85, .12);
+      border: 1px solid rgba(255, 51, 85, .3);
+      padding: 2px 8px;
+      margin-top: 4px;
+      animation: livePulse 1.5s step-end infinite
     }
 
-    /* ═══════════════════════════════════════════ NEWS */
+    .no-matches {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--c-muted);
+      font-size: 1.6rem
+    }
+
+    .no-matches span {
+      font-size: 4rem;
+      display: block;
+      margin-bottom: 16px
+    }
+
+    .api-credit {
+      font-size: 1.1rem;
+      color: rgba(74, 127, 165, .5);
+      text-align: center;
+      margin-top: 12px;
+      letter-spacing: 1px
+    }
+
+    .refresh-btn {
+      font-family: 'Orbitron', monospace;
+      font-size: 1.1rem;
+      color: var(--c-cyan);
+      border: 1px solid var(--c-border2);
+      padding: 6px 16px;
+      background: rgba(0, 255, 234, .05);
+      cursor: pointer;
+      transition: all .3s;
+      clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px)100%, 0% 100%);
+      margin-right: auto
+    }
+
+    .refresh-btn:hover {
+      background: rgba(0, 255, 234, .15);
+      box-shadow: var(--glow-sm)
+    }
+
     #news {
       background: var(--c-bg2)
     }
 
+    .news-filter {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 32px;
+      flex-wrap: wrap
+    }
+
+    .ntab {
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 8px 20px;
+      background: transparent;
+      color: var(--c-muted);
+      border: 1px solid rgba(0, 170, 255, .2);
+      cursor: pointer;
+      border-radius: 20px;
+      transition: all .25s
+    }
+
+    .ntab:hover,
+    .ntab.active {
+      background: rgba(0, 170, 255, .1);
+      color: var(--c-cyan);
+      border-color: var(--c-blue)
+    }
+
     .news-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 28px
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 26px
     }
 
     .news-card {
@@ -1691,17 +1829,7 @@
       overflow: hidden;
       transition: all .4s;
       position: relative;
-      backdrop-filter: blur(12px);
-    }
-
-    .news-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(0, 170, 255, .04), transparent);
-      opacity: 0;
-      transition: opacity .3s;
-      z-index: 0
+      backdrop-filter: blur(12px)
     }
 
     .news-card:hover {
@@ -1710,14 +1838,11 @@
       transform: translateY(-8px)
     }
 
-    .news-card:hover::before {
-      opacity: 1
-    }
-
     .news-img-wrap {
       overflow: hidden;
       aspect-ratio: 16/9;
-      position: relative
+      position: relative;
+      background: linear-gradient(135deg, #000b1e, #001e3c)
     }
 
     .news-img {
@@ -1725,7 +1850,7 @@
       height: 100%;
       object-fit: cover;
       filter: saturate(.8) brightness(.85);
-      transition: all .5s;
+      transition: all .5s
     }
 
     .news-card:hover .news-img {
@@ -1735,20 +1860,20 @@
 
     .news-img-fallback {
       width: 100%;
-      height: 200px;
+      height: 100%;
+      min-height: 180px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 6rem;
+      font-size: 5rem;
+      background: linear-gradient(135deg, #000b1e, #001e3c)
     }
 
     .news-body {
-      padding: 22px;
-      position: relative;
-      z-index: 1
+      padding: 22px
     }
 
-    .news-tag {
+    .news-source-badge {
       font-family: 'Orbitron', monospace;
       font-size: 1rem;
       letter-spacing: 2px;
@@ -1756,49 +1881,46 @@
       border: 1px solid var(--c-border2);
       padding: 4px 14px;
       display: inline-block;
-      margin-bottom: 14px;
-      clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
-      background: rgba(0, 255, 234, .05);
+      margin-bottom: 12px;
+      clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px)100%, 0% 100%);
+      background: rgba(0, 255, 234, .05)
     }
 
-    .news-title {
-      font-size: 1.7rem;
+    .news-title-link {
+      font-size: 1.6rem;
       font-weight: 700;
       color: white;
       display: block;
       margin-bottom: 10px;
       line-height: 1.4;
-      transition: color .3s;
+      transition: color .3s
     }
 
-    .news-title:hover {
+    .news-title-link:hover {
       color: var(--c-cyan)
     }
 
     .news-meta {
       display: flex;
-      flex-wrap: wrap;
       gap: 12px;
       font-size: 1.2rem;
       color: var(--c-muted);
-      margin-bottom: 12px;
-      align-items: center
+      margin-bottom: 10px;
+      flex-wrap: wrap
     }
 
-    .news-meta span {
-      display: flex;
-      align-items: center;
-      gap: 4px
-    }
-
-    .news-text {
-      font-size: 1.35rem;
+    .news-desc {
+      font-size: 1.3rem;
       color: var(--c-muted);
       line-height: 1.7;
-      margin-bottom: 18px
+      margin-bottom: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden
     }
 
-    .news-read {
+    .news-read-btn {
       font-family: 'Orbitron', monospace;
       font-size: 1.1rem;
       color: var(--c-blue);
@@ -1806,95 +1928,155 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      transition: all .3s;
+      transition: all .3s
     }
 
-    .news-read:hover {
+    .news-read-btn:hover {
       color: var(--c-cyan);
       gap: 14px;
       text-shadow: var(--glow-sm)
     }
 
-    /* ═══════════════════════════════════════════ CHATBOT */
+    .news-loading {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--c-muted);
+      font-size: 1.5rem;
+      grid-column: 1/-1
+    }
+
+    .news-loading-anim {
+      font-size: 3rem;
+      display: block;
+      animation: spin 1.5s linear infinite;
+      margin-bottom: 12px
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg)
+      }
+
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    /* ── CHATBOT ── */
     .chat-fab {
       position: fixed;
-      bottom: 28px;
-      left: 28px;
-      z-index: 500;
-      width: 62px;
-      height: 62px;
-      background: var(--grad-blue);
+      bottom: 30px;
+      left: 30px;
+      width: 68px;
+      height: 68px;
       border-radius: 50%;
+      background: var(--grad-blue);
+      border: 2px solid rgba(0, 255, 234, .4);
+      cursor: pointer;
+      z-index: 600;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.6rem;
-      box-shadow: var(--glow-md);
-      transition: all .3s;
-      animation: fabPulse 3s ease-in-out infinite;
-      border: 2px solid rgba(0, 255, 234, .3);
+      box-shadow: 0 8px 32px rgba(0, 170, 255, .6);
+      transition: transform .3s;
+      animation: fabFloat 3s ease-in-out infinite, fabRing 2.5s ease-in-out 3
     }
 
-    @keyframes fabPulse {
+    @keyframes fabFloat {
 
       0%,
       100% {
-        box-shadow: var(--glow-md)
+        transform: translateY(0)
       }
 
       50% {
-        box-shadow: var(--glow-lg)
+        transform: translateY(-8px)
+      }
+    }
+
+    @keyframes fabRing {
+      0% {
+        box-shadow: 0 8px 32px rgba(0, 170, 255, .6), 0 0 0 0 rgba(0, 170, 255, .4)
+      }
+
+      70% {
+        box-shadow: 0 8px 32px rgba(0, 170, 255, .6), 0 0 0 20px rgba(0, 170, 255, 0)
+      }
+
+      100% {
+        box-shadow: 0 8px 32px rgba(0, 170, 255, .6), 0 0 0 0 rgba(0, 170, 255, 0)
       }
     }
 
     .chat-fab:hover {
-      transform: scale(1.12) rotate(10deg);
-      box-shadow: var(--glow-lg)
+      transform: scale(1.12) translateY(0) !important;
+      box-shadow: 0 12px 40px rgba(0, 170, 255, .8)
     }
 
-    .chat-fab-badge {
+    .chat-fab-icon {
+      font-size: 30px;
+      line-height: 1;
+      filter: drop-shadow(0 0 8px rgba(0, 0, 0, .5))
+    }
+
+    .chat-badge {
       position: absolute;
-      top: -4px;
-      right: -4px;
-      width: 18px;
-      height: 18px;
-      background: #ff3355;
-      border-radius: 50%;
+      top: -5px;
+      right: -5px;
+      min-width: 22px;
+      height: 22px;
+      background: linear-gradient(135deg, #ff3355, #ff6600);
+      border-radius: 11px;
+      font-size: 10px;
+      font-weight: 900;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: .9rem;
-      font-weight: 700;
-      color: white;
-      box-shadow: 0 0 8px #ff3355;
+      box-shadow: 0 0 12px rgba(255, 51, 85, .7);
+      animation: badgePop 2s ease-in-out infinite;
+      padding: 0 4px;
+      font-family: 'Orbitron', monospace;
+      letter-spacing: 0
+    }
+
+    @keyframes badgePop {
+
+      0%,
+      100% {
+        transform: scale(1)
+      }
+
+      50% {
+        transform: scale(1.15)
+      }
     }
 
     .chat-window {
       position: fixed;
-      bottom: 105px;
-      left: 28px;
-      width: 390px;
-      height: 570px;
-      z-index: 500;
-      background: rgba(0, 8, 20, .97);
-      border: 1px solid var(--c-border);
-      box-shadow: var(--glow-md);
+      bottom: 114px;
+      left: 22px;
+      width: 440px;
+      max-height: 640px;
+      z-index: 600;
       display: none;
       flex-direction: column;
-      clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
-      backdrop-filter: blur(24px);
+      border-radius: 20px;
       overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .8), 0 0 80px rgba(0, 170, 255, .12);
+      border: 1px solid rgba(0, 170, 255, .4);
+      backdrop-filter: blur(40px)
     }
 
     .chat-window.open {
       display: flex;
-      animation: chatIn .4s cubic-bezier(.34, 1.56, .64, 1) both
+      animation: chatSlide .4s cubic-bezier(.34, 1.56, .64, 1)
     }
 
-    @keyframes chatIn {
+    @keyframes chatSlide {
       from {
         opacity: 0;
-        transform: scale(.85) translateY(20px);
+        transform: translateY(20px) scale(.9);
         transform-origin: bottom left
       }
 
@@ -1905,80 +2087,166 @@
     }
 
     .chat-head {
-      padding: 16px 18px;
-      background: linear-gradient(135deg, rgba(0, 100, 255, .25), rgba(0, 180, 255, .1));
-      border-bottom: 1px solid var(--c-border);
+      background: linear-gradient(135deg, rgba(0, 60, 180, .6), rgba(0, 130, 255, .25));
+      border-bottom: 1px solid rgba(0, 170, 255, .25);
+      padding: 14px 18px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       flex-shrink: 0;
+      position: relative;
+      overflow: hidden
+    }
+
+    .chat-head::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--grad-blue);
+      box-shadow: var(--glow-sm)
+    }
+
+    .chat-av-wrap {
+      position: relative;
+      flex-shrink: 0
     }
 
     .chat-av {
-      width: 44px;
-      height: 44px;
-      background: var(--grad-blue);
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
+      background: var(--grad-blue);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
-      box-shadow: var(--glow-sm);
+      font-size: 24px;
+      box-shadow: 0 0 20px rgba(0, 170, 255, .6);
+      border: 2px solid rgba(0, 255, 234, .5);
+      animation: avatarPulse 3s infinite
+    }
+
+    .chat-av-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
       border: 2px solid rgba(0, 255, 234, .3);
-      flex-shrink: 0;
-      animation: avatarPulse 3s infinite;
+      animation: ringPulse 2s ease-in-out infinite
     }
 
-    .chat-info h3 {
+    @keyframes ringPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: .6
+      }
+
+      50% {
+        transform: scale(1.1);
+        opacity: 1
+      }
+    }
+
+    .chat-av-dot {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 13px;
+      height: 13px;
+      background: #00ff88;
+      border-radius: 50%;
+      border: 2px solid #00050f;
+      box-shadow: 0 0 8px #00ff88;
+      animation: onlinePulse 2s infinite
+    }
+
+    .chat-head-info {
+      flex: 1
+    }
+
+    .chat-head-name {
       font-family: 'Orbitron', monospace;
-      font-size: 1.4rem;
-      color: white
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: white;
+      letter-spacing: 1px
     }
 
-    .chat-info small {
+    .chat-head-sub {
       font-size: 1.1rem;
       color: var(--c-cyan);
       display: flex;
       align-items: center;
-      gap: 5px
+      gap: 6px;
+      margin-top: 3px
     }
 
-    .chat-info small::before {
-      content: '';
+    .head-sub-dot {
       width: 7px;
       height: 7px;
       background: #00ff88;
       border-radius: 50%;
-      box-shadow: 0 0 8px #00ff88;
-      display: inline-block
+      box-shadow: 0 0 6px #00ff88;
+      flex-shrink: 0;
+      animation: onlinePulse 2s infinite
     }
 
-    .chat-close {
-      margin-right: auto;
+    .chat-head-actions {
+      display: flex;
+      gap: 6px
+    }
+
+    .chat-head-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(0, 170, 255, .1);
+      border: 1px solid rgba(0, 170, 255, .2);
       color: var(--c-muted);
-      font-size: 2rem;
-      transition: color .2s
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.4rem;
+      transition: all .2s
     }
 
-    .chat-close:hover {
-      color: var(--c-cyan)
+    .chat-head-btn:hover {
+      background: rgba(0, 170, 255, .25);
+      color: var(--c-cyan);
+      border-color: var(--c-cyan)
     }
 
     .chat-msgs {
       flex: 1;
       overflow-y: auto;
-      padding: 18px;
+      padding: 16px;
       display: flex;
       flex-direction: column;
-      gap: 13px
+      gap: 13px;
+      background: rgba(0, 5, 15, .97);
+      min-height: 300px;
+      max-height: 420px
+    }
+
+    .chat-msgs::-webkit-scrollbar {
+      width: 3px
+    }
+
+    .chat-msgs::-webkit-scrollbar-thumb {
+      background: rgba(0, 170, 255, .3);
+      border-radius: 2px
     }
 
     .msg {
       max-width: 88%;
-      animation: msgIn .3s ease
+      animation: msgFade .3s ease
     }
 
-    @keyframes msgIn {
+    @keyframes msgFade {
       from {
         opacity: 0;
         transform: translateY(8px)
@@ -1998,53 +2266,86 @@
       align-self: flex-end
     }
 
+    .msg-label {
+      font-size: 1rem;
+      color: var(--c-muted);
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      letter-spacing: .5px
+    }
+
+    .msg.user .msg-label {
+      justify-content: flex-end
+    }
+
     .msg-bubble {
-      padding: 11px 15px;
-      font-size: 1.3rem;
-      line-height: 1.6
+      padding: 13px 17px;
+      font-size: 1.35rem;
+      line-height: 1.65;
+      font-family: 'Cairo', sans-serif
     }
 
     .msg.bot .msg-bubble {
-      background: rgba(0, 100, 255, .15);
-      border: 1px solid var(--c-border);
+      background: rgba(0, 80, 200, .2);
+      border: 1px solid rgba(0, 170, 255, .25);
+      border-radius: 4px 18px 18px 18px;
       color: var(--c-white);
-      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+      border-right: 3px solid var(--c-blue)
     }
 
     .msg.user .msg-bubble {
-      background: linear-gradient(135deg, rgba(0, 120, 255, .45), rgba(0, 200, 255, .25));
-      border: 1px solid var(--c-blue);
-      color: white;
-      clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
+      background: linear-gradient(135deg, rgba(0, 100, 255, .5), rgba(0, 200, 255, .3));
+      border: 1px solid rgba(0, 170, 255, .4);
+      border-radius: 18px 4px 18px 18px;
+      color: white
     }
 
-    .typing {
+    .msg-time {
+      font-size: .95rem;
+      color: var(--c-muted);
+      margin-top: 5px;
+      opacity: .7
+    }
+
+    .msg.bot .msg-time {
+      text-align: left
+    }
+
+    .msg.user .msg-time {
+      text-align: right
+    }
+
+    .typing-bub {
+      background: rgba(0, 80, 200, .2);
+      border: 1px solid rgba(0, 170, 255, .25);
+      border-radius: 4px 18px 18px 18px;
+      padding: 14px 18px;
       display: flex;
-      gap: 5px;
-      padding: 12px 16px;
-      background: rgba(0, 100, 255, .15);
-      border: 1px solid var(--c-border);
-      width: fit-content;
-      align-self: flex-start
+      align-items: center;
+      gap: 6px;
+      align-self: flex-start;
+      border-right: 3px solid var(--c-blue)
     }
 
-    .typing span {
-      width: 7px;
-      height: 7px;
+    .td {
+      width: 8px;
+      height: 8px;
       background: var(--c-cyan);
       border-radius: 50%;
-      animation: typeBounce 1.2s ease-in-out infinite
+      animation: tdance 1.2s ease-in-out infinite
     }
 
-    .typing span:nth-child(2) {
+    .td:nth-child(2) {
       animation-delay: .2s
     }
 
-    .typing span:nth-child(3) {
+    .td:nth-child(3) {
       animation-delay: .4s
     }
 
-    @keyframes typeBounce {
+    @keyframes tdance {
 
       0%,
       60%,
@@ -2053,32 +2354,138 @@
       }
 
       30% {
-        transform: translateY(-9px)
+        transform: translateY(-8px)
       }
     }
 
-    .chat-input-row {
-      padding: 13px;
-      border-top: 1px solid var(--c-border);
+    .google-card {
       display: flex;
-      gap: 8px;
+      align-items: center;
+      gap: 12px;
+      background: rgba(66, 133, 244, .1);
+      border: 1px solid rgba(66, 133, 244, .35);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: all .3s;
+      max-width: 88%;
+      align-self: flex-start;
+      animation: msgFade .3s ease
+    }
+
+    .google-card:hover {
+      background: rgba(66, 133, 244, .2);
+      border-color: rgba(66, 133, 244, .6);
+      transform: translateY(-2px)
+    }
+
+    .google-icon {
+      font-size: 2.2rem;
+      flex-shrink: 0
+    }
+
+    .google-card-text {
+      font-size: 1.25rem;
+      line-height: 1.4
+    }
+
+    .google-card-text strong {
+      color: #4285f4;
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 2px
+    }
+
+    .google-card-text span {
+      color: var(--c-muted);
+      font-size: 1.15rem
+    }
+
+    .ai-thinking {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(0, 255, 234, .05);
+      border: 1px solid rgba(0, 255, 234, .2);
+      border-radius: 12px;
+      padding: 10px 16px;
+      align-self: flex-start;
+      animation: msgFade .3s ease;
+      max-width: 88%
+    }
+
+    .ai-think-icon {
+      font-size: 1.8rem;
+      animation: spin 2s linear infinite
+    }
+
+    .ai-think-text {
+      font-size: 1.25rem;
+      color: var(--c-cyan)
+    }
+
+    .chat-quick {
+      padding: 10px 16px;
+      display: flex;
+      gap: 7px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      background: rgba(0, 5, 15, .97);
+      border-top: 1px solid rgba(0, 170, 255, .1);
+      flex-shrink: 0
+    }
+
+    .chat-quick::-webkit-scrollbar {
+      display: none
+    }
+
+    .qr-btn {
+      white-space: nowrap;
+      font-size: 1.15rem;
+      padding: 7px 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(0, 170, 255, .3);
+      background: rgba(0, 170, 255, .07);
+      color: var(--c-cyan);
+      cursor: pointer;
+      transition: all .2s;
       flex-shrink: 0;
+      font-family: 'Cairo', sans-serif
+    }
+
+    .qr-btn:hover {
+      background: rgba(0, 170, 255, .2);
+      border-color: var(--c-cyan);
+      transform: translateY(-1px)
+    }
+
+    .chat-input-row {
+      padding: 13px 16px;
+      background: rgba(0, 5, 15, .99);
+      border-top: 1px solid rgba(0, 170, 255, .2);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-shrink: 0
     }
 
     .chat-inp {
       flex: 1;
       background: rgba(0, 100, 255, .1);
-      border: 1px solid var(--c-border);
+      border: 1px solid rgba(0, 170, 255, .25);
+      border-radius: 14px;
+      padding: 11px 16px;
       color: white;
-      padding: 11px 14px;
-      font-size: 1.3rem;
-      clip-path: polygon(7px 0%, 100% 0%, calc(100% - 7px) 100%, 0% 100%);
-      transition: border-color .3s;
+      font-size: 1.35rem;
+      outline: none;
+      transition: border-color .3s, box-shadow .3s;
+      font-family: 'Cairo', sans-serif
     }
 
     .chat-inp:focus {
       border-color: var(--c-blue);
-      box-shadow: 0 0 8px rgba(0, 170, 255, .2)
+      box-shadow: 0 0 15px rgba(0, 170, 255, .2)
     }
 
     .chat-inp::placeholder {
@@ -2086,51 +2493,38 @@
     }
 
     .chat-send {
+      width: 46px;
+      height: 46px;
+      border-radius: 13px;
       background: var(--grad-blue);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
       color: #00050f;
-      padding: 11px 18px;
-      font-size: 1.6rem;
-      font-weight: 700;
-      clip-path: polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%);
       transition: all .3s;
+      flex-shrink: 0
     }
 
     .chat-send:hover {
-      box-shadow: var(--glow-sm);
-      filter: brightness(1.15)
+      box-shadow: 0 0 20px rgba(0, 170, 255, .6);
+      transform: scale(1.08)
     }
 
-    /* Suggested questions */
-    .chat-suggestions {
-      padding: 0 13px 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px
+    .chat-send:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+      transform: none
     }
 
-    .sug-btn {
-      font-size: 1.1rem;
-      color: var(--c-cyan);
-      border: 1px solid var(--c-border2);
-      padding: 5px 11px;
-      background: rgba(0, 255, 234, .05);
-      transition: all .25s;
-      cursor: pointer;
-      clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px) 100%, 0% 100%);
-    }
-
-    .sug-btn:hover {
-      background: rgba(0, 255, 234, .12);
-      box-shadow: 0 0 8px rgba(0, 255, 234, .3)
-    }
-
-    /* ═══════════════════════════════════════════ FOOTER */
     footer {
       background: var(--c-bg2);
       border-top: 1px solid var(--c-border);
       padding: 60px 40px 20px;
       position: relative;
-      z-index: 1;
+      z-index: 1
     }
 
     .footer-grid {
@@ -2138,7 +2532,7 @@
       margin: 0 auto 40px;
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
-      gap: 40px;
+      gap: 40px
     }
 
     .footer-logo {
@@ -2152,7 +2546,7 @@
       margin-bottom: 15px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 10px
     }
 
     .footer-logo img {
@@ -2186,7 +2580,7 @@
       font-size: 1.8rem;
       color: var(--c-muted);
       transition: all .3s;
-      clip-path: polygon(7px 0%, 100% 0%, calc(100% - 7px) 100%, 0% 100%);
+      clip-path: polygon(7px 0%, 100% 0%, calc(100% - 7px)100%, 0% 100%)
     }
 
     .soc-a:hover {
@@ -2204,7 +2598,7 @@
       letter-spacing: 2px;
       margin-bottom: 18px;
       padding-bottom: 10px;
-      border-bottom: 1px solid var(--c-border);
+      border-bottom: 1px solid var(--c-border)
     }
 
     .footer-links {
@@ -2219,7 +2613,7 @@
       transition: all .3s;
       display: flex;
       align-items: center;
-      gap: 7px;
+      gap: 7px
     }
 
     .footer-links a::before {
@@ -2260,7 +2654,7 @@
       padding: 12px;
       font-size: 1.3rem;
       margin-bottom: 10px;
-      transition: border-color .3s;
+      transition: border-color .3s
     }
 
     .nl-inp:focus {
@@ -2280,7 +2674,7 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 10px
     }
 
     .footer-bottom p {
@@ -2292,19 +2686,10 @@
       color: var(--c-cyan)
     }
 
-    .footer-api-note {
-      font-size: 1.2rem;
-      color: var(--c-muted);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    /* BACK TO TOP */
     .back-top {
       position: fixed;
-      bottom: 28px;
-      right: 28px;
+      bottom: 30px;
+      right: 30px;
       z-index: 50;
       width: 46px;
       height: 46px;
@@ -2317,7 +2702,7 @@
       font-size: 2rem;
       transition: all .3s;
       opacity: 0;
-      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px)100%, 0% 100%)
     }
 
     .back-top.show {
@@ -2331,15 +2716,13 @@
       transform: translateY(-4px)
     }
 
-    /* SECTION SEPARATOR */
     .sep {
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--c-cyan), transparent);
       opacity: .3;
-      margin: 0;
+      margin: 0
     }
 
-    /* ═══════════════════════════════════════════ RESPONSIVE */
     @media(max-width:1024px) {
       .hero-inner {
         grid-template-columns: 1fr;
@@ -2404,7 +2787,7 @@
         grid-template-columns: 1fr 1fr
       }
 
-      .match-body {
+      .lmc-body {
         padding: 18px
       }
 
@@ -2443,32 +2826,29 @@
       .timer-n {
         font-size: 1.8rem
       }
-    }
 
-    .hero-name-glitch {
-      background: linear-gradient(135deg, #fff5a0 0%, #ffd700 40%, #ff6b00 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 50px rgba(255, 107, 0, 0.5));
+      .match-tabs-row {
+        gap: 5px
+      }
+
+      .mtab {
+        font-size: 1.1rem;
+        padding: 8px 14px
+      }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- BLOBS -->
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
   <div class="blob blob-3"></div>
-
-  <!-- CURSOR -->
   <div id="cursor"></div>
   <div id="dot"></div>
 
-  <!-- ═══════ HEADER ═══════ -->
   <header id="hdr">
     <a href="#home" class="logo">
-      <img src="./Ammar__4_-removebg-preview.png" alt="Ammar Logo" onerror="this.style.display='none'">
+      <img src="./Ammar__4_-removebg-preview.png" alt="Ammar" onerror="this.style.display='none'">
       AMMAR.GG
     </a>
     <nav>
@@ -2476,61 +2856,43 @@
         <li><a href="#home" class="nav-link active">الرئيسية</a></li>
         <li><a href="#pl" class="nav-link">الدوري الإنجليزي</a></li>
         <li><a href="#wc" class="nav-link">كأس العالم 🏆</a></li>
-        <li><a href="#tournament" class="nav-link">البطولات</a></li>
+        <li><a href="#matches" class="nav-link">المباريات</a></li>
         <li><a href="#news" class="nav-link">الأخبار</a></li>
       </ul>
     </nav>
     <a href="#" class="header-cta">انضم للفريق 🎮</a>
-    <button class="hamburger" id="ham" aria-label="menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="ham"><span></span><span></span><span></span></button>
   </header>
 
-  <!-- ═══════ HERO ═══════ -->
   <section class="hero" id="home">
     <div class="hero-inner">
       <div class="hero-left">
-        <div class="hero-tag">PRO PLAYER • EGYPT • 2025</div>
+        <div class="hero-tag">PRO PLAYER • SUDAN 🇸🇩 • 2026</div>
         <h1 class="hero-name">
           <div class="hero-name-glitch" data-text="AMMAR">AMMAR</div>
         </h1>
-        <p class="hero-subtitle">
-          لاعب محترف في <span>فري فاير</span> وعاشق <span>كرة القدم</span> من مصر 🇪🇬
+        <p class="hero-subtitle">لاعب محترف في <span>فري فاير وفيفا</span> وعاشق <span>كرة القدم</span> من السودان 🇸🇩
         </p>
         <div class="hero-btns">
-          <a href="#tournament" class="btn-main">🏆 البطولات</a>
-          <a href="#wc" class="btn-outline">⚽ كأس العالم</a>
+          <a href="#matches" class="btn-main">⚽ المباريات الحية</a>
+          <a href="#wc" class="btn-outline">🏆 كأس العالم</a>
         </div>
         <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-n" data-count="1200">0</span>
-            <span class="stat-l">انتصار</span>
-          </div>
-          <div class="stat">
-            <span class="stat-n" data-count="98">0</span>
-            <span class="stat-l">دقة %</span>
-          </div>
-          <div class="stat">
-            <span class="stat-n" data-count="50">0</span>
-            <span class="stat-l">بطولة</span>
-          </div>
-          <div class="stat">
-            <span class="stat-n" data-count="5">0</span>
-            <span class="stat-l">سنوات</span>
-          </div>
+          <div class="stat"><span class="stat-n" data-count="1200">0</span><span class="stat-l">انتصار</span></div>
+          <div class="stat"><span class="stat-n" data-count="98">0</span><span class="stat-l">دقة %</span></div>
+          <div class="stat"><span class="stat-n" data-count="50">0</span><span class="stat-l">بطولة</span></div>
+          <div class="stat"><span class="stat-n" data-count="5">0</span><span class="stat-l">سنوات</span></div>
         </div>
       </div>
-
       <div class="hero-right">
         <div class="player-card">
           <div class="card-header">
             <div class="card-avatar">🎮</div>
             <div class="card-info">
               <h2>AMMAR YASSER</h2>
-              <span class="badge">⭐ PRO PLAYER • EGYPT</span>
+              <span class="badge">⭐ PRO PLAYER • SUDAN 🇸🇩</span>
             </div>
           </div>
-
           <div class="skills-grid">
             <div class="skill-item">
               <div class="skill-name">فري فاير <span>98</span></div>
@@ -2557,17 +2919,13 @@
               </div>
             </div>
           </div>
-
           <div class="online-status">
-            <div class="online-dot"></div>
-            <span>متصل الآن — جاهز للعب!</span>
+            <div class="online-dot"></div><span>متصل الآن — جاهز للعب! 🎮</span>
           </div>
-
-          <!-- WORLD CUP COUNTDOWN -->
           <div class="wc-countdown">
             <div class="wc-countdown-label">🏆 WORLD CUP 2026 COUNTDOWN</div>
             <div class="wc-timer">
-              <div class="timer-unit"><span class="timer-n" id="cd-d">07</span><span class="timer-l">يوم</span></div>
+              <div class="timer-unit"><span class="timer-n" id="cd-d">00</span><span class="timer-l">يوم</span></div>
               <span class="timer-sep">:</span>
               <div class="timer-unit"><span class="timer-n" id="cd-h">00</span><span class="timer-l">ساعة</span></div>
               <span class="timer-sep">:</span>
@@ -2583,7 +2941,6 @@
 
   <div class="sep"></div>
 
-  <!-- ═══════ PREMIER LEAGUE ═══════ -->
   <section class="section" id="pl">
     <div class="container">
       <div class="sec-head" data-r>
@@ -2592,13 +2949,11 @@
         <div class="sec-line"></div>
         <p class="sec-desc">الموسم انتهى • آرسنال بطل • الموسم القادم 22 أغسطس 2026</p>
       </div>
-
       <div class="pl-grid">
-        <!-- PL TABLE -->
         <div class="pl-table-wrap" data-r="l">
           <div class="pl-table-title">
-            <h3>🏴󠁧󠁢󠁥󠁮󠁧󠁿 جدول الترتيب النهائي</h3>
-            <span class="live-indicator"><span class="live-dot"></span>2025-26</span>
+            <h3>🏴󠁧󠁢󠁥󠁮󠁧󠁿 الترتيب النهائي 2025-26</h3>
+            <span class="live-indicator"><span class="live-dot"></span>FINAL</span>
           </div>
           <table class="pl-table">
             <thead>
@@ -2616,13 +2971,9 @@
               <tr class="champion-row">
                 <td class="pl-pos p1">1</td>
                 <td>
-                  <div class="pl-team-cell">
-                    <img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png"
-                      alt="Arsenal"
-                      onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 26%22><circle cx=%2213%22 cy=%2213%22 r=%2212%22 fill=%22%23EF0107%22/></svg>'">
-                    <span class="pl-team-name">آرسنال 🏆</span>
-                  </div>
+                  <div class="pl-team-cell"><img class="pl-team-logo"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/60px-Arsenal_FC.svg.png"
+                      alt="Arsenal"><span class="pl-team-name">آرسنال 🏆</span></div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">27</td>
@@ -2633,13 +2984,9 @@
               <tr class="ucl-row">
                 <td class="pl-pos">2</td>
                 <td>
-                  <div class="pl-team-cell">
-                    <img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png"
-                      alt="Man City"
-                      onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 26%22><circle cx=%2213%22 cy=%2213%22 r=%2212%22 fill=%22%236CABDD%22/></svg>'">
-                    <span class="pl-team-name">مان سيتي</span>
-                  </div>
+                  <div class="pl-team-cell"><img class="pl-team-logo"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/60px-Manchester_City_FC_badge.svg.png"
+                      alt="City"><span class="pl-team-name">مان سيتي</span></div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">25</td>
@@ -2650,13 +2997,9 @@
               <tr class="ucl-row">
                 <td class="pl-pos">3</td>
                 <td>
-                  <div class="pl-team-cell">
-                    <img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png"
-                      alt="Man Utd"
-                      onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 26%22><circle cx=%2213%22 cy=%2213%22 r=%2212%22 fill=%22%23DA291C%22/></svg>'">
-                    <span class="pl-team-name">مان يونايتد</span>
-                  </div>
+                  <div class="pl-team-cell"><img class="pl-team-logo"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/60px-Manchester_United_FC_crest.svg.png"
+                      alt="Utd"><span class="pl-team-name">مان يونايتد</span></div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">22</td>
@@ -2667,13 +3010,9 @@
               <tr class="ucl-row">
                 <td class="pl-pos">4</td>
                 <td>
-                  <div class="pl-team-cell">
-                    <img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/1200px-Aston_Villa_FC_crest_%282016%29.svg.png"
-                      alt="Aston Villa"
-                      onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 26%22><circle cx=%2213%22 cy=%2213%22 r=%2212%22 fill=%22%2395BFE5%22/></svg>'">
-                    <span class="pl-team-name">أستون فيلا</span>
-                  </div>
+                  <div class="pl-team-cell"><img class="pl-team-logo"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/60px-Aston_Villa_FC_crest_%282016%29.svg.png"
+                      alt="Villa"><span class="pl-team-name">أستون فيلا</span></div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">22</td>
@@ -2684,13 +3023,9 @@
               <tr class="ucl-row">
                 <td class="pl-pos">5</td>
                 <td>
-                  <div class="pl-team-cell">
-                    <img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png"
-                      alt="Liverpool"
-                      onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 26%22><circle cx=%2213%22 cy=%2213%22 r=%2212%22 fill=%22%23C8102E%22/></svg>'">
-                    <span class="pl-team-name">ليفربول</span>
-                  </div>
+                  <div class="pl-team-cell"><img class="pl-team-logo"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Liverpool_FC.svg/60px-Liverpool_FC.svg.png"
+                      alt="LFC"><span class="pl-team-name">ليفربول</span></div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">20</td>
@@ -2701,13 +3036,9 @@
               <tr class="europa-row">
                 <td class="pl-pos">6</td>
                 <td>
-                  <div class="pl-team-cell">
-                    <img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png"
-                      alt="Chelsea"
-                      onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 26%22><circle cx=%2213%22 cy=%2213%22 r=%2212%22 fill=%22%23034694%22/></svg>'">
-                    <span class="pl-team-name">تشيلسي</span>
-                  </div>
+                  <div class="pl-team-cell"><img class="pl-team-logo"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Chelsea_FC.svg/60px-Chelsea_FC.svg.png"
+                      alt="Chelsea"><span class="pl-team-name">تشيلسي</span></div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">18</td>
@@ -2718,13 +3049,9 @@
               <tr>
                 <td class="pl-pos">7</td>
                 <td>
-                  <div class="pl-team-cell">
-                    <img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/West_Ham_United_FC_logo.svg/1200px-West_Ham_United_FC_logo.svg.png"
-                      alt="Spurs"
-                      onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 26%22><circle cx=%2213%22 cy=%2213%22 r=%2212%22 fill=%22%23FFFFFF%22/></svg>'">
-                    <span class="pl-team-name">توتنهام</span>
-                  </div>
+                  <div class="pl-team-cell"><img class="pl-team-logo"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/60px-Tottenham_Hotspur.svg.png"
+                      alt="Spurs"><span class="pl-team-name">توتنهام</span></div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">16</td>
@@ -2735,47 +3062,9 @@
               <tr>
                 <td class="pl-pos">8</td>
                 <td>
-                  <div class="pl-team-cell">
-                    <img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Bournemouth_AFC_crest.svg/1200px-Bournemouth_AFC_crest.svg.png"
-                      alt="Bournemouth"
-                      onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 26%22><circle cx=%2213%22 cy=%2213%22 r=%2212%22 fill=%22%23DA291C%22/></svg>'">
-                    <span class="pl-team-name">بورنموث</span>
-                  </div>
-                </td>
-                <td>38</td>
-                <td class="pl-w">16</td>
-                <td class="pl-d">7</td>
-                <td class="pl-l">15</td>
-                <td class="pl-pts">55</td>
-              </tr>
-              <tr>
-                <td class="pl-pos">9</td>
-                <td>
-                  <div class="pl-team-cell">
-                    <img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Newcastle_United_Logo.svg/1200px-Newcastle_United_Logo.svg.png"
-                      alt="Newcastle"
-                      onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 26%22><circle cx=%2213%22 cy=%2213%22 r=%2212%22 fill=%22%23333%22/></svg>'">
-                    <span class="pl-team-name">نيوكاسل</span>
-                  </div>
-                </td>
-                <td>38</td>
-                <td class="pl-w">15</td>
-                <td class="pl-d">8</td>
-                <td class="pl-l">15</td>
-                <td class="pl-pts">53</td>
-              </tr>
-              <tr>
-                <td class="pl-pos">10</td>
-                <td>
-                  <div class="pl-team-cell">
-                    <img class="pl-team-logo"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Nottingham_Forest_FC_logo.svg/1200px-Nottingham_Forest_FC_logo.svg.png"
-                      alt="Nottm Forest"
-                      onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 26%22><circle cx=%2213%22 cy=%2213%22 r=%2212%22 fill=%22%23E53233%22/></svg>'">
-                    <span class="pl-team-name">نوتنغهام فورست</span>
-                  </div>
+                  <div class="pl-team-cell"><img class="pl-team-logo"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Nottingham_Forest_FC_logo.svg/60px-Nottingham_Forest_FC_logo.svg.png"
+                      alt="Forest"><span class="pl-team-name">نوتنغهام فورست</span></div>
                 </td>
                 <td>38</td>
                 <td class="pl-w">14</td>
@@ -2785,16 +3074,10 @@
               </tr>
             </tbody>
           </table>
-          <div class="next-season">
-            <span class="ns-icon">📅</span>
-            <div class="ns-text">
-              <strong>الموسم القادم 2026-27</strong>
-              يبدأ 22 أغسطس 2026 • آرسنال يدافع عن اللقب
-            </div>
+          <div class="next-season"><span class="ns-icon">📅</span>
+            <div class="ns-text"><strong>الموسم القادم 2026-27</strong>يبدأ 22 أغسطس 2026 • آرسنال يدافع عن اللقب</div>
           </div>
         </div>
-
-        <!-- CHAMPION INFO -->
         <div style="display:flex;flex-direction:column;gap:20px">
           <div class="champion-banner" data-r="r">
             <div class="champ-header">
@@ -2808,10 +3091,9 @@
             <div class="champ-stats">
               <div class="cs-item"><span class="cs-n">89</span><span class="cs-l">نقطة</span></div>
               <div class="cs-item"><span class="cs-n">27</span><span class="cs-l">فوز</span></div>
-              <div class="cs-item"><span class="cs-n">380</span><span class="cs-l">مباراة</span></div>
+              <div class="cs-item"><span class="cs-n">74</span><span class="cs-l">هدف</span></div>
             </div>
           </div>
-
           <div class="champion-banner" data-r="r" style="border-color:rgba(0,170,255,.3)">
             <div style="border-bottom:1px solid rgba(255,215,0,.15);padding-bottom:14px;margin-bottom:14px;">
               <div class="champ-title" style="margin-bottom:5px">🥇 هداف الموسم</div>
@@ -2823,8 +3105,7 @@
                     HAALAND</div>
                   <div style="color:var(--c-muted);font-size:1.2rem">مان سيتي • النرويج</div>
                 </div>
-                <div style="margin-right:auto;text-align:center">
-                  <span
+                <div style="margin-right:auto;text-align:center"><span
                     style="font-family:'Orbitron',monospace;font-size:3rem;font-weight:900;color:var(--c-gold);text-shadow:var(--glow-gold)">27</span>
                   <div style="font-size:1.1rem;color:var(--c-muted)">هدف</div>
                 </div>
@@ -2843,28 +3124,15 @@
               </div>
             </div>
           </div>
-
           <div class="pl-news" data-r="r">
-            <div class="pl-news-item">
-              <span class="pl-news-icon">⬇️</span>
-              <div class="pl-news-text">
-                <strong>المتراجعون من الدوري</strong>
-                وست هام • بيرنلي • وولفرهامبتون
-              </div>
+            <div class="pl-news-item"><span class="pl-news-icon">⬇️</span>
+              <div class="pl-news-text"><strong>المتراجعون</strong>وست هام • بيرنلي • وولفرهامبتون</div>
             </div>
-            <div class="pl-news-item">
-              <span class="pl-news-icon">🇪🇺</span>
-              <div class="pl-news-text">
-                <strong>دوري الأبطال</strong>
-                آرسنال • مان سيتي • مان يونايتد • أستون فيلا • ليفربول
-              </div>
+            <div class="pl-news-item"><span class="pl-news-icon">🇪🇺</span>
+              <div class="pl-news-text"><strong>دوري الأبطال</strong>آرسنال • مان سيتي • مان يونايتد • أستون فيلا</div>
             </div>
-            <div class="pl-news-item">
-              <span class="pl-news-icon">📊</span>
-              <div class="pl-news-text">
-                <strong>إحصائيات الموسم</strong>
-                1,045 هدف في 380 مباراة • معدل 2.75 هدف/مباراة
-              </div>
+            <div class="pl-news-item"><span class="pl-news-icon">📊</span>
+              <div class="pl-news-text"><strong>إحصائيات الموسم</strong>1,045 هدف • معدل 2.75 هدف/مباراة</div>
             </div>
           </div>
         </div>
@@ -2874,7 +3142,6 @@
 
   <div class="sep"></div>
 
-  <!-- ═══════ WORLD CUP 2026 ═══════ -->
   <section class="section" id="wc">
     <div class="container">
       <div class="sec-head" data-r>
@@ -2883,35 +3150,22 @@
         <div class="sec-line sec-line-gold"></div>
         <p class="sec-desc">48 منتخب • 12 مجموعة • 104 مباراة • الانطلاق 11 يونيو 2026</p>
       </div>
-
-      <!-- KICKOFF BANNER -->
       <div class="wc-kickoff" data-r>
         <div class="wc-kickoff-label">🏟️ الافتتاح • الإستاد الأزتيكي • مكسيكو سيتي</div>
         <div class="wc-kickoff-date">11 يونيو 2026</div>
         <div class="wc-kickoff-sub">المكسيك 🇲🇽 vs جنوب أفريقيا 🇿🇦 • المجموعة A</div>
       </div>
-
-      <!-- GROUP FILTER TABS -->
       <div class="groups-nav" data-r>
         <button class="grp-tab active" data-filter="all">الكل</button>
-        <button class="grp-tab" data-filter="A">A</button>
-        <button class="grp-tab" data-filter="B">B</button>
-        <button class="grp-tab" data-filter="C">C</button>
-        <button class="grp-tab" data-filter="D">D</button>
-        <button class="grp-tab" data-filter="E">E</button>
-        <button class="grp-tab" data-filter="F">F</button>
+        <button class="grp-tab" data-filter="A">A</button><button class="grp-tab" data-filter="B">B</button>
+        <button class="grp-tab" data-filter="C">C</button><button class="grp-tab" data-filter="D">D</button>
+        <button class="grp-tab" data-filter="E">E</button><button class="grp-tab" data-filter="F">F</button>
         <button class="grp-tab highlight" data-filter="G">G 🇪🇬</button>
-        <button class="grp-tab" data-filter="H">H</button>
-        <button class="grp-tab" data-filter="I">I</button>
-        <button class="grp-tab" data-filter="J">J</button>
-        <button class="grp-tab" data-filter="K">K</button>
-        <button class="grp-tab" data-filter="L">L</button>
+        <button class="grp-tab" data-filter="H">H</button><button class="grp-tab" data-filter="I">I</button>
+        <button class="grp-tab highlight" data-filter="J">J 👑</button>
+        <button class="grp-tab" data-filter="K">K</button><button class="grp-tab" data-filter="L">L</button>
       </div>
-
-      <!-- ALL 12 GROUPS GRID -->
       <div class="groups-grid" id="groupsGrid">
-
-        <!-- GROUP A -->
         <div class="group-card" data-group="A" data-r>
           <div class="grp-header">
             <div>
@@ -2921,30 +3175,24 @@
             <div class="grp-date">11 يونيو</div>
           </div>
           <div class="grp-teams">
-            <div class="grp-team host">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/mx.png" alt="Mexico" class="team-flag">
-              </div>
-              <span class="t-name">المكسيك</span><span class="t-host-badge">🏟️</span>
+            <div class="grp-team">
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/mx.png" class="team-flag"></div><span
+                class="t-name">المكسيك 🏟️</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/za.png" alt="South Africa"
-                  class="team-flag"></div>
-              <span class="t-name">جنوب أفريقيا</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/za.png" class="team-flag"></div><span
+                class="t-name">جنوب أفريقيا</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/kr.png" alt="South Korea" class="team-flag">
-              </div>
-              <span class="t-name">كوريا الجنوبية</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/kr.png" class="team-flag"></div><span
+                class="t-name">كوريا الجنوبية</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/cz.png" alt="Czechia" class="team-flag">
-              </div>
-              <span class="t-name">التشيك</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/cz.png" class="team-flag"></div><span
+                class="t-name">التشيك</span>
             </div>
           </div>
         </div>
-
-        <!-- GROUP B -->
         <div class="group-card" data-group="B" data-r>
           <div class="grp-header">
             <div>
@@ -2954,29 +3202,24 @@
             <div class="grp-date">12 يونيو</div>
           </div>
           <div class="grp-teams">
-            <div class="grp-team host">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ca.png" alt="Canada" class="team-flag">
-              </div>
-              <span class="t-name">كندا</span><span class="t-host-badge">🏟️</span>
+            <div class="grp-team">
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ca.png" class="team-flag"></div><span
+                class="t-name">كندا 🏟️</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ba.png" alt="Bosnia" class="team-flag">
-              </div>
-              <span class="t-name">البوسنة والهرسك</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ba.png" class="team-flag"></div><span
+                class="t-name">البوسنة</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/qa.png" alt="Qatar" class="team-flag"></div>
-              <span class="t-name">قطر</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/qa.png" class="team-flag"></div><span
+                class="t-name">قطر</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ch.png" alt="Switzerland" class="team-flag">
-              </div>
-              <span class="t-name">سويسرا</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ch.png" class="team-flag"></div><span
+                class="t-name">سويسرا</span>
             </div>
           </div>
         </div>
-
-        <!-- GROUP C -->
         <div class="group-card" data-group="C" data-r>
           <div class="grp-header">
             <div>
@@ -2987,28 +3230,23 @@
           </div>
           <div class="grp-teams">
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/br.png" alt="Brazil" class="team-flag">
-              </div>
-              <span class="t-name">البرازيل ⭐</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/br.png" class="team-flag"></div><span
+                class="t-name">البرازيل ⭐</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ma.png" alt="Morocco" class="team-flag">
-              </div>
-              <span class="t-name">المغرب 🌟</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ma.png" class="team-flag"></div><span
+                class="t-name">المغرب 🌟</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ht.png" alt="Haiti" class="team-flag"></div>
-              <span class="t-name">هايتي</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ht.png" class="team-flag"></div><span
+                class="t-name">هايتي</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/gb-sct.png" alt="Scotland"
-                  class="team-flag"></div>
-              <span class="t-name">اسكتلندا</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/gb-sct.png" class="team-flag"></div><span
+                class="t-name">اسكتلندا</span>
             </div>
           </div>
         </div>
-
-        <!-- GROUP D -->
         <div class="group-card" data-group="D" data-r>
           <div class="grp-header">
             <div>
@@ -3018,29 +3256,24 @@
             <div class="grp-date">12 يونيو</div>
           </div>
           <div class="grp-teams">
-            <div class="grp-team host">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/us.png" alt="USA" class="team-flag"></div>
-              <span class="t-name">الولايات المتحدة</span><span class="t-host-badge">🏟️</span>
+            <div class="grp-team">
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/us.png" class="team-flag"></div><span
+                class="t-name">الولايات المتحدة 🏟️</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/py.png" alt="Paraguay" class="team-flag">
-              </div>
-              <span class="t-name">باراغواي</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/py.png" class="team-flag"></div><span
+                class="t-name">باراغواي</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/au.png" alt="Australia" class="team-flag">
-              </div>
-              <span class="t-name">أستراليا</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/au.png" class="team-flag"></div><span
+                class="t-name">أستراليا</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/tr.png" alt="Turkey" class="team-flag">
-              </div>
-              <span class="t-name">تركيا</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/tr.png" class="team-flag"></div><span
+                class="t-name">تركيا</span>
             </div>
           </div>
         </div>
-
-        <!-- GROUP E -->
         <div class="group-card" data-group="E" data-r>
           <div class="grp-header">
             <div>
@@ -3051,29 +3284,23 @@
           </div>
           <div class="grp-teams">
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/de.png" alt="Germany" class="team-flag">
-              </div>
-              <span class="t-name">ألمانيا ⭐</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/de.png" class="team-flag"></div><span
+                class="t-name">ألمانيا ⭐</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/cw.png" alt="Curacao" class="team-flag">
-              </div>
-              <span class="t-name">كوراساو</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ci.png" class="team-flag"></div><span
+                class="t-name">ساحل العاج</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ci.png" alt="Ivory Coast" class="team-flag">
-              </div>
-              <span class="t-name">ساحل العاج</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ec.png" class="team-flag"></div><span
+                class="t-name">الإكوادور</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ec.png" alt="Ecuador" class="team-flag">
-              </div>
-              <span class="t-name">الإكوادور</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/cw.png" class="team-flag"></div><span
+                class="t-name">كوراساو</span>
             </div>
           </div>
         </div>
-
-        <!-- GROUP F -->
         <div class="group-card" data-group="F" data-r>
           <div class="grp-header">
             <div>
@@ -3084,59 +3311,49 @@
           </div>
           <div class="grp-teams">
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/nl.png" alt="Netherlands" class="team-flag">
-              </div>
-              <span class="t-name">هولندا ⭐</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/nl.png" class="team-flag"></div><span
+                class="t-name">هولندا ⭐</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/jp.png" alt="Japan" class="team-flag"></div>
-              <span class="t-name">اليابان</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/jp.png" class="team-flag"></div><span
+                class="t-name">اليابان</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/se.png" alt="Sweden" class="team-flag">
-              </div>
-              <span class="t-name">السويد</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/se.png" class="team-flag"></div><span
+                class="t-name">السويد</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/tn.png" alt="Tunisia" class="team-flag">
-              </div>
-              <span class="t-name">تونس 🌟</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/tn.png" class="team-flag"></div><span
+                class="t-name">تونس 🌟</span>
             </div>
           </div>
         </div>
-
-        <!-- GROUP G - EGYPT! -->
         <div class="group-card featured" data-group="G" data-r>
           <div class="grp-header">
             <div>
               <div class="grp-letter" style="color:var(--c-cyan);text-shadow:var(--glow-sm)">G</div>
-              <div class="grp-sub">مجموعة مصر 🇪🇬</div>
-            </div>
-            <span class="featured-tag">⭐ FEATURED</span>
+              <div class="grp-sub">مجموعة بلجيكا ومصر</div>
+            </div><span class="featured-tag">⭐ HOT</span>
           </div>
           <div class="grp-teams">
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/be.png" alt="Belgium" class="team-flag">
-              </div>
-              <span class="t-name">بلجيكا ⭐</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/be.png" class="team-flag"></div><span
+                class="t-name">بلجيكا ⭐</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/eg.png" alt="Egypt" class="team-flag"></div>
-              <span class="t-name egypt">مصر 🌟🇪🇬</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/eg.png" class="team-flag"></div><span
+                class="t-name featured-nation">مصر 🌟🇪🇬</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ir.png" alt="Iran" class="team-flag"></div>
-              <span class="t-name">إيران</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ir.png" class="team-flag"></div><span
+                class="t-name">إيران</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/nz.png" alt="New Zealand" class="team-flag">
-              </div>
-              <span class="t-name">نيوزيلندا</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/nz.png" class="team-flag"></div><span
+                class="t-name">نيوزيلندا</span>
             </div>
           </div>
         </div>
-
-        <!-- GROUP H -->
         <div class="group-card" data-group="H" data-r>
           <div class="grp-header">
             <div>
@@ -3147,28 +3364,23 @@
           </div>
           <div class="grp-teams">
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/es.png" alt="Spain" class="team-flag"></div>
-              <span class="t-name">إسبانيا ⭐</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/es.png" class="team-flag"></div><span
+                class="t-name">إسبانيا ⭐</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/cv.png" alt="Cape Verde" class="team-flag">
-              </div>
-              <span class="t-name">الرأس الأخضر</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/sa.png" class="team-flag"></div><span
+                class="t-name">السعودية 🌟</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/sa.png" alt="Saudi Arabia"
-                  class="team-flag"></div>
-              <span class="t-name">السعودية 🌟</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/uy.png" class="team-flag"></div><span
+                class="t-name">أوروغواي</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/uy.png" alt="Uruguay" class="team-flag">
-              </div>
-              <span class="t-name">أوروغواي</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/cv.png" class="team-flag"></div><span
+                class="t-name">الرأس الأخضر</span>
             </div>
           </div>
         </div>
-
-        <!-- GROUP I -->
         <div class="group-card" data-group="I" data-r>
           <div class="grp-header">
             <div>
@@ -3179,61 +3391,49 @@
           </div>
           <div class="grp-teams">
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/fr.png" alt="France" class="team-flag">
-              </div>
-              <span class="t-name">فرنسا ⭐⭐</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/fr.png" class="team-flag"></div><span
+                class="t-name">فرنسا ⭐⭐</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/sn.png" alt="Senegal" class="team-flag">
-              </div>
-              <span class="t-name">السنغال 🌟</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/sn.png" class="team-flag"></div><span
+                class="t-name">السنغال 🌟</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/iq.png" alt="Iraq" class="team-flag"></div>
-              <span class="t-name">العراق 🌟</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/iq.png" class="team-flag"></div><span
+                class="t-name">العراق 🌟</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/no.png" alt="Norway" class="team-flag">
-              </div>
-              <span class="t-name">النرويج</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/no.png" class="team-flag"></div><span
+                class="t-name">النرويج</span>
             </div>
           </div>
         </div>
-
-        <!-- GROUP J -->
-        <div class="group-card" data-group="J" data-r>
+        <div class="group-card featured" data-group="J" data-r>
           <div class="grp-header">
             <div>
-              <div class="grp-letter">J</div>
-              <div class="grp-sub">المجموعة العاشرة</div>
-            </div>
-            <div class="grp-date">16 يونيو</div>
+              <div class="grp-letter" style="color:var(--c-gold);text-shadow:var(--glow-gold)">J</div>
+              <div class="grp-sub">مجموعة الأرجنتين</div>
+            </div><span class="featured-tag">👑 CHAMPS</span>
           </div>
           <div class="grp-teams">
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ar.png" alt="Argentina" class="team-flag">
-              </div>
-              <span class="t-name">الأرجنتين ⭐⭐⭐ 👑</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/ar.png" class="team-flag"></div><span
+                class="t-name">الأرجنتين 👑⭐⭐⭐</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/dz.png" alt="Algeria" class="team-flag">
-              </div>
-              <span class="t-name">الجزائر 🌟</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/dz.png" class="team-flag"></div><span
+                class="t-name featured-nation">الجزائر 🌟</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/at.png" alt="Austria" class="team-flag">
-              </div>
-              <span class="t-name">النمسا</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/at.png" class="team-flag"></div><span
+                class="t-name">النمسا</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/jo.png" alt="Jordan" class="team-flag">
-              </div>
-              <span class="t-name">الأردن 🌟</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/jo.png" class="team-flag"></div><span
+                class="t-name featured-nation">الأردن 🌟</span>
             </div>
           </div>
         </div>
-
-        <!-- GROUP K -->
         <div class="group-card" data-group="K" data-r>
           <div class="grp-header">
             <div>
@@ -3244,29 +3444,23 @@
           </div>
           <div class="grp-teams">
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/pt.png" alt="Portugal" class="team-flag">
-              </div>
-              <span class="t-name">البرتغال ⭐</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/pt.png" class="team-flag"></div><span
+                class="t-name">البرتغال ⭐</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/cd.png" alt="DR Congo" class="team-flag">
-              </div>
-              <span class="t-name">الكونغو الديمقراطية</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/cd.png" class="team-flag"></div><span
+                class="t-name">الكونغو</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/uz.png" alt="Uzbekistan" class="team-flag">
-              </div>
-              <span class="t-name">أوزبكستان</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/uz.png" class="team-flag"></div><span
+                class="t-name">أوزبكستان</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/co.png" alt="Colombia" class="team-flag">
-              </div>
-              <span class="t-name">كولومبيا</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/co.png" class="team-flag"></div><span
+                class="t-name">كولومبيا</span>
             </div>
           </div>
         </div>
-
-        <!-- GROUP L -->
         <div class="group-card" data-group="L" data-r>
           <div class="grp-header">
             <div>
@@ -3277,214 +3471,86 @@
           </div>
           <div class="grp-teams">
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/gb-eng.png" alt="England" class="team-flag">
-              </div>
-              <span class="t-name">إنجلترا ⭐</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/gb-eng.png" class="team-flag"></div><span
+                class="t-name">إنجلترا ⭐</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/hr.png" alt="Croatia" class="team-flag">
-              </div>
-              <span class="t-name">كرواتيا</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/hr.png" class="team-flag"></div><span
+                class="t-name">كرواتيا</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/gh.png" alt="Ghana" class="team-flag"></div>
-              <span class="t-name">غانا</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/gh.png" class="team-flag"></div><span
+                class="t-name">غانا</span>
             </div>
             <div class="grp-team">
-              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/pa.png" alt="Panama" class="team-flag">
-              </div>
-              <span class="t-name">بنما</span>
+              <div class="team-flag-wrap"><img src="https://flagcdn.com/w40/pa.png" class="team-flag"></div><span
+                class="t-name">بنما</span>
             </div>
           </div>
         </div>
-
-      </div><!-- end groups-grid -->
+      </div>
     </div>
   </section>
 
   <div class="sep"></div>
 
-  <!-- ═══════ TOURNAMENT / CLUB MATCHES ═══════ -->
-  <section class="section" id="tournament">
+  <section class="section" id="matches">
     <div class="container">
       <div class="sec-head" data-r>
-        <span class="sec-tag">// CLUB MATCHES</span>
-        <h2 class="sec-title">مباريات <span class="hl">الأندية</span></h2>
+        <span class="sec-tag">// LIVE & RECENT MATCHES</span>
+        <h2 class="sec-title">المباريات <span class="hl">الحية والحديثة</span></h2>
         <div class="sec-line"></div>
+        <p class="sec-desc">بيانات مباشرة • كأس العالم 2026 • مباريات ودية اليوم 6 يونيو 2026 • دوريات أوروبا</p>
       </div>
-
-      <div class="matches-list">
-
-        <div class="match-card" data-r>
-          <div class="match-banner">
-            <span class="mb-league">🏆 UEFA Champions League</span>
-            <span class="mb-status live">● LIVE</span>
-          </div>
-          <div class="match-body">
-            <div class="m-team">
-              <img class="m-team-logo"
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/1200px-Paris_Saint-Germain_F.C..svg.png"
-                alt="PSG" onerror="this.src='./paris-saint-germain.png'" loading="lazy">
-              <span class="m-team-name">باريس سان جيرمان</span>
-            </div>
-            <div class="m-center">
-              <span class="m-score">2 - 1</span>
-              <span class="m-date">المجموعة 04 | 06</span>
-            </div>
-            <div class="m-team">
-              <img class="m-team-logo" src="https://flagcdn.com/w80/es.png" alt="Spain" onerror="this.src='./world.png'"
-                loading="lazy" style="border-radius:4px">
-              <span class="m-team-name">إسبانيا 🇪🇸</span>
-            </div>
-          </div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px" data-r>
+        <div class="match-tabs-row" style="margin-bottom:0;flex:1">
+          <button class="mtab wc-tab active" data-tab="wc">🏆 كأس العالم 2026</button>
+          <button class="mtab" data-tab="friendly">🤝 ودية اليوم 🔴</button>
+          <button class="mtab" data-tab="epl">🏴󠁧󠁢󠁥󠁮󠁧󠁿 الدوري الإنجليزي</button>
+          <button class="mtab" data-tab="ucl">🇪🇺 دوري الأبطال</button>
         </div>
-
-        <div class="match-card" data-r>
-          <div class="match-banner">
-            <span class="mb-league">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League</span>
-            <span class="mb-status upcoming">⟳ UPCOMING</span>
-          </div>
-          <div class="match-body">
-            <div class="m-team">
-              <img class="m-team-logo"
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png"
-                alt="Man Utd" onerror="this.src='./manchester-united (1).png'" loading="lazy">
-              <span class="m-team-name">مانشستر يونايتيد</span>
-            </div>
-            <div class="m-center">
-              <span class="m-vs">VS</span>
-              <span class="m-time">22 أغسطس 2026</span>
-              <span class="m-date">افتتاح الموسم الجديد</span>
-            </div>
-            <div class="m-team">
-              <img class="m-team-logo"
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png"
-                alt="Chelsea" onerror="this.src='./chelsea.png'" loading="lazy">
-              <span class="m-team-name">تشيلسي 🏰</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="match-card" data-r>
-          <div class="match-banner">
-            <span class="mb-league">🏆 UEFA Champions League</span>
-            <span class="mb-status finished">✓ FINISHED</span>
-          </div>
-          <div class="match-body">
-            <div class="m-team">
-              <img class="m-team-logo"
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png"
-                alt="Chelsea" onerror="this.src='./chelsea.png'" loading="lazy">
-              <span class="m-team-name">تشيلسي 🏰</span>
-            </div>
-            <div class="m-center">
-              <span class="m-score">3 - 2</span>
-              <span class="m-date">المجموعة 02 | 03</span>
-            </div>
-            <div class="m-team">
-              <img class="m-team-logo"
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Borussia_Dortmund_logo.svg/1200px-Borussia_Dortmund_logo.svg.png"
-                alt="Dortmund" onerror="this.src='./borusia-dortmund.png'" loading="lazy">
-              <span class="m-team-name">بروسيا دورتموند 🏅</span>
-            </div>
-          </div>
-        </div>
-
+        <button class="refresh-btn" id="refreshBtn">↻ تحديث</button>
       </div>
+      <div class="match-container" id="matchContainer"></div>
+      <p class="api-credit">⚡ بيانات TheSportsDB API • تحديث تلقائي</p>
     </div>
   </section>
 
   <div class="sep"></div>
 
-  <!-- ═══════ NEWS ═══════ -->
   <section class="section" id="news">
     <div class="container">
       <div class="sec-head" data-r>
-        <span class="sec-tag">// LATEST NEWS</span>
-        <h2 class="sec-title">أحدث <span class="hl">الأخبار</span></h2>
+        <span class="sec-tag">// DAILY FOOTBALL NEWS</span>
+        <h2 class="sec-title">أخبار <span class="hl">الكرة اليومية</span></h2>
         <div class="sec-line"></div>
+        <p class="sec-desc">آخر أخبار اللاعبين والأندية والدوريات • تحديث مستمر</p>
       </div>
-      <div class="news-grid">
-
-        <div class="news-card" data-r>
-          <div class="news-img-wrap">
-            <img src="./freefire.jpg" alt="Free Fire" class="news-img"
-              onerror="this.parentElement.innerHTML='<div class=news-img-fallback style=background:linear-gradient(135deg,%23000b1e,%230044aa)>🎮</div>'">
-          </div>
-          <div class="news-body">
-            <span class="news-tag">FREE FIRE</span>
-            <div class="news-meta">
-              <span>📅 يناير 2021</span>
-              <span>✍️ عمار</span>
-            </div>
-            <a href="https://www.pocketgamer.biz/celebrating-seven-years-of-garena-free-fires-success/" target="_blank"
-              class="news-title">
-              أكثر من مليار تنزيل على Google Play! 🎉
-            </a>
-            <p class="news-text">أصبحت فري فاير أول لعبة باتل رويال يتم تنزيلها أكثر من مليار مرة على متجر Google Play.
-              إنجاز تاريخي!</p>
-            <a href="https://www.pocketgamer.biz/celebrating-seven-years-of-garena-free-fires-success/" target="_blank"
-              class="news-read">اقرأ المزيد →</a>
-          </div>
-        </div>
-
-        <div class="news-card" data-r>
-          <div class="news-img-wrap">
-            <img src="./Fifa.jpg" alt="FIFA" class="news-img"
-              onerror="this.parentElement.innerHTML='<div class=news-img-fallback style=background:linear-gradient(135deg,%23000b1e,%23003366)>⚽</div>'">
-          </div>
-          <div class="news-body">
-            <span class="news-tag"
-              style="color:var(--c-gold);border-color:rgba(255,215,0,.3);background:rgba(255,215,0,.05)">WORLD
-              CUP</span>
-            <div class="news-meta">
-              <span>📅 4 يونيو 2026</span>
-              <span>✍️ عمار</span>
-            </div>
-            <a href="#wc" class="news-title">7 أيام على انطلاق كأس العالم 2026! 🏆</a>
-            <p class="news-text">الأرجنتين تدافع عن اللقب في مجموعة J مع الجزائر والنمسا والأردن. ومصر تواجه بلجيكا في
-              مجموعة G!</p>
-            <a href="#wc" class="news-read">اقرأ المزيد →</a>
-          </div>
-        </div>
-
-        <div class="news-card" data-r>
-          <div class="news-img-wrap">
-            <div class="news-img-fallback" style="background:linear-gradient(135deg,#00050f,#001e3c,#000b1e)">🏆</div>
-          </div>
-          <div class="news-body">
-            <span class="news-tag"
-              style="color:#ff6b00;border-color:rgba(255,107,0,.3);background:rgba(255,107,0,.05)">PREMIER LEAGUE</span>
-            <div class="news-meta">
-              <span>📅 مايو 2026</span>
-              <span>✍️ عمار</span>
-            </div>
-            <a href="#pl" class="news-title">آرسنال بطل الدوري الإنجليزي 2025-26! 🔴</a>
-            <p class="news-text">89 نقطة و27 فوز! آرسنال يتوج بلقبه الرابع عشر في الدوري الإنجليزي الممتاز بفارق كبير عن
-              المنافسين.</p>
-            <a href="#pl" class="news-read">اقرأ المزيد →</a>
-          </div>
-        </div>
-
+      <div class="news-filter" data-r>
+        <button class="ntab active" data-nfilter="all">الكل 🌍</button>
+        <button class="ntab" data-nfilter="transfers">🔄 صفقات</button>
+        <button class="ntab" data-nfilter="wc">🏆 كأس العالم</button>
+        <button class="ntab" data-nfilter="results">⚽ نتائج</button>
+      </div>
+      <div class="news-grid" id="newsGrid">
+        <div class="news-loading"><span class="news-loading-anim">⚽</span>جارٍ تحميل آخر أخبار الكرة...</div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════ FOOTER ═══════ -->
   <footer>
     <div class="footer-grid">
       <div>
-        <div class="footer-logo">
-          <img src="./Ammar__4_-removebg-preview.png" alt="Ammar Logo" onerror="this.style.display='none'">
-          AMMAR.GG
-        </div>
-        <p class="footer-desc">لاعب محترف في فري فاير وعاشق كرة القدم من مصر 🇪🇬 انضم لفريقي وسنسيطر على الميدان!</p>
+        <div class="footer-logo"><img src="./Ammar__4_-removebg-preview.png" alt="Ammar"
+            onerror="this.style.display='none'">AMMAR.GG</div>
+        <p class="footer-desc">لاعب محترف في فري فاير وفيفا وعاشق كرة القدم من السودان 🇸🇩 انضم لفريقي وسنسيطر على
+          الميدان!</p>
         <div class="social-row">
           <a href="#" class="soc-a"><ion-icon name="logo-youtube"></ion-icon></a>
           <a href="#" class="soc-a"><ion-icon name="logo-twitch"></ion-icon></a>
           <a href="#" class="soc-a"><ion-icon name="logo-instagram"></ion-icon></a>
           <a href="#" class="soc-a"><ion-icon name="logo-twitter"></ion-icon></a>
-          <a href="#" class="soc-a"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#" class="soc-a"><ion-icon name="logo-tiktok"></ion-icon></a>
         </div>
       </div>
       <div class="footer-col">
@@ -3493,16 +3559,15 @@
           <li><a href="#home">الرئيسية</a></li>
           <li><a href="#pl">الدوري الإنجليزي</a></li>
           <li><a href="#wc">كأس العالم 2026</a></li>
-          <li><a href="#tournament">البطولات</a></li>
+          <li><a href="#matches">المباريات</a></li>
           <li><a href="#news">الأخبار</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>تواصل معي</h4>
-        <div class="contact-item"><span class="label">📍 الموقع</span><span class="val">مصر، القاهرة، اللبيني</span>
-        </div>
+        <div class="contact-item"><span class="label">📍 الموقع</span><span class="val">السودان، الخرطوم</span></div>
         <div class="contact-item"><span class="label">📧 البريد</span><span class="val">Ammar@gmail.com</span></div>
-        <div class="contact-item"><span class="label">📱 الهاتف</span><span class="val">+20 1124684062</span></div>
+        <div class="contact-item"><span class="label">📱 الهاتف</span><span class="val">+249 9X XXX XXXX</span></div>
       </div>
       <div class="footer-col">
         <h4>النشرة الإخبارية</h4>
@@ -3514,309 +3579,576 @@
     </div>
     <div class="footer-bottom">
       <p>© 2026 <span>عمار ياسر</span> — جميع الحقوق محفوظة</p>
-      <p class="footer-api-note">🌍 بيانات كأس العالم: Wikipedia / ESPN • الدوري: الأرقام الرسمية</p>
-      <p>صنع بـ ❤️ من <span>مصر 🇪🇬</span></p>
+      <p style="font-size:1.2rem;color:var(--c-muted)">⚡ بيانات: TheSportsDB • Puter.js AI</p>
+      <p>صنع بـ ❤️ من <span>السودان 🇸🇩</span></p>
     </div>
   </footer>
 
-  <!-- BACK TO TOP -->
   <a href="#home" class="back-top" id="backTop">↑</a>
 
-  <!-- ═══════ CHATBOT ═══════ -->
+  <!-- CHATBOT -->
   <button class="chat-fab" id="chatFab">
-    🤖
-    <span class="chat-fab-badge">AI</span>
+    <span class="chat-fab-icon">🤖</span>
+    <span class="chat-badge">AI</span>
   </button>
 
-  <div class="chat-window" id="chatWin">
+  <div class="chat-window" id="chatWindow">
     <div class="chat-head">
-      <div class="chat-av">🤖</div>
-      <div class="chat-info">
-        <h3>AMMAR AI</h3>
-        <small>GPT-4o • Online Now</small>
+      <div class="chat-av-wrap">
+        <div class="chat-av">🤖</div>
+        <div class="chat-av-ring"></div>
+        <div class="chat-av-dot"></div>
       </div>
-      <button class="chat-close" id="chatClose">✕</button>
+      <div class="chat-head-info">
+        <div class="chat-head-name">كوتش فوتبول AI</div>
+        <div class="chat-head-sub"><span class="head-sub-dot"></span>Puter AI • Claude Opus</div>
+      </div>
+      <div class="chat-head-actions">
+        <button class="chat-head-btn" id="clearChat" title="مسح المحادثة">🗑</button>
+        <button class="chat-head-btn" id="chatClose" title="إغلاق">✕</button>
+      </div>
     </div>
     <div class="chat-msgs" id="chatMsgs">
       <div class="msg bot">
-        <div class="msg-bubble">مرحباً بك! 🎮⚽<br>أنا مساعد عمار الذكي، يمكنني الإجابة على أسئلتك عن الألعاب وكأس العالم
-          2026 والدوريات الأوروبية!<br>اسألني أي شيء! ⚡</div>
+        <div class="msg-label">🤖 كوتش AI</div>
+        <div class="msg-bubble">أهلاً بك! أنا مساعدك الذكي لكرة القدم ⚽🏆<br><br>أستطيع الإجابة على أي سؤال عن:<br>•
+          مباريات اليوم الودية 🤝<br>• كأس العالم 2026 🌍<br>• نتائج وأخبار الدوريات ⚽<br>• اللاعبين والأندية
+          ⭐<br><br>مدعوم بـ Puter AI • Claude Opus 🚀</div>
+        <div class="msg-time">الآن</div>
       </div>
     </div>
-    <div class="chat-suggestions" id="chatSuggestions">
-      <button class="sug-btn" onclick="sendSuggestion(this)">🏆 كأس العالم 2026</button>
-      <button class="sug-btn" onclick="sendSuggestion(this)">🇪🇬 مجموعة مصر</button>
-      <button class="sug-btn" onclick="sendSuggestion(this)">🎮 فري فاير تيبس</button>
-      <button class="sug-btn" onclick="sendSuggestion(this)">⚽ آرسنال بطل</button>
+    <div class="chat-quick" id="chatQuick">
+      <button class="qr-btn" onclick="sendQuick(this)">🏆 كأس العالم 2026</button>
+      <button class="qr-btn" onclick="sendQuick(this)">🤝 مباريات اليوم</button>
+      <button class="qr-btn" onclick="sendQuick(this)">🏴󠁧󠁢󠁥󠁮󠁧󠁿 آرسنال بطل</button>
+      <button class="qr-btn" onclick="sendQuick(this)">🔄 آخر الصفقات</button>
+      <button class="qr-btn" onclick="sendQuick(this)">🇦🇷 الأرجنتين</button>
+      <button class="qr-btn" onclick="sendQuick(this)">🇸🇩 السودان</button>
     </div>
     <div class="chat-input-row">
-      <input type="text" class="chat-inp" id="chatInp" placeholder="اسأل عن الألعاب أو الكورة..." dir="rtl">
-      <button class="chat-send" id="chatSend">➤</button>
+      <input type="text" class="chat-inp" id="chatInp" placeholder="اسأل عن أي شيء يخص الكورة..." dir="rtl">
+      <button class="chat-send" id="chatSendBtn">➤</button>
     </div>
   </div>
 
-  <!-- LOAD PUTER.JS -->
-  <script src="https://js.puter.com/v2/"></script>
-
   <script>
-    // ═══════════════════════════════
-    // CURSOR
-    // ═══════════════════════════════
-    const cursor = document.getElementById('cursor');
-    const dot = document.getElementById('dot');
-    document.addEventListener('mousemove', e => {
-      cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px';
-      dot.style.left = e.clientX + 'px'; dot.style.top = e.clientY + 'px';
-    });
-    document.querySelectorAll('a,button,.grp-team,.match-card,.news-card').forEach(el => {
-      el.addEventListener('mouseenter', () => cursor.classList.add('big'));
-      el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
-    });
+    // ══ CURSOR ══
+    const cursor = document.getElementById('cursor'), dot = document.getElementById('dot');
+    document.addEventListener('mousemove', e => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; dot.style.left = e.clientX + 'px'; dot.style.top = e.clientY + 'px' });
+    document.querySelectorAll('a,button,.grp-team,.lmc,.news-card,.group-card').forEach(el => { el.addEventListener('mouseenter', () => cursor.classList.add('big')); el.addEventListener('mouseleave', () => cursor.classList.remove('big')) });
 
-    // ═══════════════════════════════
-    // HAMBURGER
-    // ═══════════════════════════════
-    document.getElementById('ham').addEventListener('click', function () {
-      document.getElementById('navList').classList.toggle('open');
-      this.classList.toggle('active');
-    });
-    document.querySelectorAll('.nav-link').forEach(l => {
-      l.addEventListener('click', () => {
-        document.getElementById('navList').classList.remove('open');
-        document.querySelectorAll('.nav-link').forEach(x => x.classList.remove('active'));
-        l.classList.add('active');
-      });
-    });
+    document.getElementById('ham').addEventListener('click', function () { document.getElementById('navList').classList.toggle('open') });
+    document.querySelectorAll('.nav-link').forEach(l => { l.addEventListener('click', () => { document.getElementById('navList').classList.remove('open'); document.querySelectorAll('.nav-link').forEach(x => x.classList.remove('active')); l.classList.add('active') }) });
 
-    // ═══════════════════════════════
-    // BACK TO TOP
-    // ═══════════════════════════════
     const backTop = document.getElementById('backTop');
-    window.addEventListener('scroll', () => {
-      backTop.classList.toggle('show', window.scrollY > 400);
-    });
+    window.addEventListener('scroll', () => { backTop.classList.toggle('show', window.scrollY > 400); document.getElementById('hdr').style.background = window.scrollY > 50 ? 'rgba(0,5,15,0.97)' : 'rgba(0,5,15,0.8)' });
 
-    // ═══════════════════════════════
-    // REVEAL ON SCROLL
-    // ═══════════════════════════════
-    const revObserver = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
-        if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('on'), (i % 4) * 80);
-          revObserver.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('[data-r]').forEach(el => revObserver.observe(el));
+    const revObs = new IntersectionObserver((entries) => { entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('on'), (i % 4) * 80); revObs.unobserve(e.target) } }) }, { threshold: .08 });
+    document.querySelectorAll('[data-r]').forEach(el => revObs.observe(el));
 
-    // ═══════════════════════════════
-    // COUNTER ANIMATION
-    // ═══════════════════════════════
-    const counterObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.dataset.count);
-          let current = 0;
-          const step = target / 60;
-          const timer = setInterval(() => {
-            current += step;
-            if (current >= target) { current = target; clearInterval(timer); }
-            el.textContent = Math.floor(current) + (target > 100 ? '+' : '');
-          }, 30);
-          counterObserver.unobserve(el);
-        }
-      });
-    });
-    document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+    const cntObs = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { const el = entry.target, target = parseInt(el.dataset.count); let cur = 0; const step = target / 60; const t = setInterval(() => { cur += step; if (cur >= target) { cur = target; clearInterval(t) } el.textContent = Math.floor(cur) + (target > 100 ? '+' : '') }, 30); cntObs.unobserve(el) } }) });
+    document.querySelectorAll('[data-count]').forEach(el => cntObs.observe(el));
 
-    // ═══════════════════════════════
-    // SKILL BARS ANIMATION
-    // ═══════════════════════════════
-    const skillObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.skill-fill').forEach(bar => {
-            setTimeout(() => bar.classList.add('animated'), 300);
-          });
-          skillObserver.unobserve(entry.target);
-        }
-      });
-    });
-    document.querySelectorAll('.player-card').forEach(el => skillObserver.observe(el));
+    const skillObs = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.querySelectorAll('.skill-fill').forEach(bar => setTimeout(() => bar.classList.add('animated'), 300)); skillObs.unobserve(entry.target) } }) });
+    document.querySelectorAll('.player-card').forEach(el => skillObs.observe(el));
 
-    // ═══════════════════════════════
-    // WC COUNTDOWN TIMER
-    // ═══════════════════════════════
     function updateCountdown() {
-      const target = new Date('2026-06-11T20:00:00-05:00'); // Mexico City time
-      const now = new Date();
-      const diff = target - now;
-      if (diff <= 0) {
-        document.getElementById('cd-d').textContent = '00';
-        document.getElementById('cd-h').textContent = '00';
-        document.getElementById('cd-m').textContent = '00';
-        document.getElementById('cd-s').textContent = 'LIVE';
-        return;
-      }
-      const d = Math.floor(diff / 86400000);
-      const h = Math.floor((diff % 86400000) / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-      document.getElementById('cd-d').textContent = String(d).padStart(2, '0');
-      document.getElementById('cd-h').textContent = String(h).padStart(2, '0');
-      document.getElementById('cd-m').textContent = String(m).padStart(2, '0');
-      document.getElementById('cd-s').textContent = String(s).padStart(2, '0');
+      const target = new Date('2026-06-11T20:00:00-05:00');
+      const diff = target - new Date();
+      if (diff <= 0) { ['cd-d', 'cd-h', 'cd-m'].forEach(id => document.getElementById(id).textContent = '00'); document.getElementById('cd-s').textContent = '🔴'; return }
+      document.getElementById('cd-d').textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
+      document.getElementById('cd-h').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+      document.getElementById('cd-m').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+      document.getElementById('cd-s').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
     }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    updateCountdown(); setInterval(updateCountdown, 1000);
 
-    // ═══════════════════════════════
-    // GROUP FILTER TABS
-    // ═══════════════════════════════
-    document.querySelectorAll('.grp-tab').forEach(tab => {
-      tab.addEventListener('click', function () {
-        document.querySelectorAll('.grp-tab').forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-        const filter = this.dataset.filter;
-        document.querySelectorAll('.group-card').forEach(card => {
-          if (filter === 'all' || card.dataset.group === filter) {
-            card.style.display = ''; card.style.animation = 'fadeIn .4s ease';
-          } else {
-            card.style.display = 'none';
+    document.querySelectorAll('.grp-tab').forEach(tab => { tab.addEventListener('click', function () { document.querySelectorAll('.grp-tab').forEach(t => t.classList.remove('active')); this.classList.add('active'); const f = this.dataset.filter; document.querySelectorAll('.group-card').forEach(c => { c.style.display = (f === 'all' || c.dataset.group === f) ? '' : ' none' }) }) });
+
+    // Particles
+    const hero = document.querySelector('.hero');
+    for (let i = 0; i < 28; i++) { const p = document.createElement('div'); const sz = 1 + Math.random() * 3; p.style.cssText = `position:absolute;width:${sz}px;height:${sz}px;background:${Math.random() > .5 ? '#00aaff' : '#00ffea'};border-radius:50%;left:${Math.random() * 100}%;top:${Math.random() * 100}%;opacity:${.2 + Math.random() * .6};animation:floatP ${4 + Math.random() * 10}s linear ${Math.random() * 5}s infinite;pointer-events:none;z-index:1;box-shadow:0 0 ${sz * 3}px currentColor`; hero.appendChild(p) }
+    const pStyle = document.createElement('style'); pStyle.textContent = '@keyframes floatP{0%{transform:translateY(0);opacity:0}10%{opacity:.8}90%{opacity:.4}100%{transform:translateY(-80px);opacity:0}}'; document.head.appendChild(pStyle);
+
+    // ══════════════════════════════════════════
+    // MATCHES API
+    // ══════════════════════════════════════════
+    const ARABIC_TEAMS = {
+      'Arsenal': 'آرسنال', 'Chelsea': 'تشيلسي', 'Manchester United': 'مان يونايتد', 'Manchester City': 'مان سيتي',
+      'Liverpool': 'ليفربول', 'Tottenham Hotspur': 'توتنهام', 'Newcastle United': 'نيوكاسل', 'Aston Villa': 'أستون فيلا',
+      'Nottingham Forest': 'نوتنغهام فورست', 'Bournemouth': 'بورنموث', 'Brighton & Hove Albion': 'برايتون',
+      'West Ham United': 'ويست هام', 'Fulham': 'فولهام', 'Brentford': 'برنتفورد', 'Crystal Palace': 'كريستال بالاس',
+      'Real Madrid': 'ريال مدريد', 'Barcelona': 'برشلونة', 'Bayern Munich': 'بايرن ميونخ',
+      'Paris Saint-Germain': 'باريس سان جيرمان', 'Juventus': 'يوفنتوس', 'Inter Milan': 'إنتر ميلان',
+      'AC Milan': 'أيه سي ميلان', 'Borussia Dortmund': 'دورتموند', 'Atletico Madrid': 'أتلتيكو مدريد',
+      'Mexico': 'المكسيك', 'Brazil': 'البرازيل', 'Argentina': 'الأرجنتين', 'France': 'فرنسا',
+      'England': 'إنجلترا', 'Germany': 'ألمانيا', 'Spain': 'إسبانيا', 'Portugal': 'البرتغال',
+      'Netherlands': 'هولندا', 'Belgium': 'بلجيكا', 'Morocco': 'المغرب', 'Senegal': 'السنغال',
+      'Egypt': 'مصر', 'Saudi Arabia': 'السعودية', 'Japan': 'اليابان', 'South Korea': 'كوريا الجنوبية',
+      'USA': 'الولايات المتحدة', 'Canada': 'كندا', 'Croatia': 'كرواتيا', 'Uruguay': 'أوروغواي',
+      'Colombia': 'كولومبيا', 'Algeria': 'الجزائر', 'Tunisia': 'تونس', 'Ivory Coast': 'ساحل العاج',
+      'Ghana': 'غانا', 'South Africa': 'جنوب أفريقيا', 'Iran': 'إيران', 'Iraq': 'العراق',
+      'Norway': 'النرويج', 'Sweden': 'السويد', 'Switzerland': 'سويسرا', 'Turkey': 'تركيا',
+      'Jordan': 'الأردن', 'Qatar': 'قطر', 'Austria': 'النمسا', 'Scotland': 'اسكتلندا',
+      'Ecuador': 'الإكوادور', 'Bolivia': 'بوليفيا', 'Peru': 'بيرو', 'Paraguay': 'باراغواي',
+      'Venezuela': 'فنزويلا', 'Chile': 'تشيلي', 'Costa Rica': 'كوستاريكا', 'Panama': 'بنما',
+      'Jamaica': 'جامايكا', 'Honduras': 'هندوراس', 'El Salvador': 'السلفادور', 'Australia': 'أستراليا',
+      'New Zealand': 'نيوزيلندا', 'Indonesia': 'إندونيسيا', 'Czech Republic': 'التشيك', 'Poland': 'بولندا',
+      'Hungary': 'المجر', 'Slovakia': 'سلوفاكيا', 'Serbia': 'صربيا', 'Ukraine': 'أوكرانيا',
+      'Greece': 'اليونان', 'Romania': 'رومانيا', 'Cameroon': 'الكاميرون', 'Nigeria': 'نيجيريا',
+      'Congo DR': 'الكونغو', 'Cape Verde': 'الرأس الأخضر', 'Mali': 'مالي', 'Uzbekistan': 'أوزبكستان',
+      'Bosnia and Herzegovina': 'البوسنة', 'Bosnia & Herzegovina': 'البوسنة',
+      'Ireland': 'أيرلندا', 'Nicaragua': 'نيكاراغوا', 'Puerto Rico': 'بورتو ريكو',
+      'Haiti': 'هايتي', 'Palestine': 'فلسطين', 'Kyrgyzstan': 'قيرغيزستان', 'Wales': 'ويلز',
+      'Bermuda': 'برمودا', 'United States': 'الولايات المتحدة'
+    };
+    function arabicName(n) { return ARABIC_TEAMS[n] || n }
+
+    function formatDateAr(dateStr) {
+      try { const d = new Date(dateStr); return d.toLocaleDateString('ar-EG', { day: 'numeric', month: 'long', year: 'numeric' }) } catch (e) { return dateStr }
+    }
+
+    function renderSkeletons(n) {
+      return Array(n).fill(0).map(() => `<div class="match-skeleton"><div class="sk-banner"></div><div class="sk-teams"><div class="sk-team"><div class="sk-logo"></div><div class="sk-name"></div></div><div class="sk-score"></div><div class="sk-team"><div class="sk-logo"></div><div class="sk-name"></div></div></div></div>`).join('');
+    }
+
+    // ─── June 6, 2026 Friendly Matches (from live screenshots) ───
+    const TODAY_FRIENDLIES_JUN6 = [
+      // ✓ Finished
+      { strHomeTeam: 'Paraguay', strAwayTeam: 'Nicaragua', intHomeScore: 4, intAwayScore: 0, dateEvent: '2026-06-06', strTime: '01:45', strHomeTeamBadge: 'https://flagcdn.com/w80/py.png', strAwayTeamBadge: 'https://flagcdn.com/w80/ni.png', _status: 'finished' },
+      { strHomeTeam: 'Saudi Arabia', strAwayTeam: 'Puerto Rico', intHomeScore: 3, intAwayScore: 0, dateEvent: '2026-06-06', strTime: '02:00', strHomeTeamBadge: 'https://flagcdn.com/w80/sa.png', strAwayTeamBadge: 'https://flagcdn.com/w80/pr.png', _status: 'finished' },
+      { strHomeTeam: 'Ireland', strAwayTeam: 'Canada', intHomeScore: 1, intAwayScore: 1, dateEvent: '2026-06-06', strTime: '02:30', strHomeTeamBadge: 'https://flagcdn.com/w80/ie.png', strAwayTeamBadge: 'https://flagcdn.com/w80/ca.png', _status: 'finished' },
+      { strHomeTeam: 'Haiti', strAwayTeam: 'Peru', intHomeScore: 1, intAwayScore: 2, dateEvent: '2026-06-06', strTime: '03:00', strHomeTeamBadge: 'https://flagcdn.com/w80/ht.png', strAwayTeamBadge: 'https://flagcdn.com/w80/pe.png', _status: 'finished' },
+      { strHomeTeam: 'Palestine', strAwayTeam: 'Kyrgyzstan', intHomeScore: 0, intAwayScore: 0, dateEvent: '2026-06-06', strTime: '17:30', strHomeTeamBadge: 'https://flagcdn.com/w80/ps.png', strAwayTeamBadge: 'https://flagcdn.com/w80/kg.png', _status: 'finished' },
+      { strHomeTeam: 'Belgium', strAwayTeam: 'Tunisia', intHomeScore: 5, intAwayScore: 0, dateEvent: '2026-06-06', strTime: '20:00', strHomeTeamBadge: 'https://flagcdn.com/w80/be.png', strAwayTeamBadge: 'https://flagcdn.com/w80/tn.png', _status: 'finished' },
+      // 🔴 Live
+      { strHomeTeam: 'Portugal', strAwayTeam: 'Chile', intHomeScore: 2, intAwayScore: 0, dateEvent: '2026-06-06', strTime: '20:45', strHomeTeamBadge: 'https://flagcdn.com/w80/pt.png', strAwayTeamBadge: 'https://flagcdn.com/w80/cl.png', _status: 'live' },
+      { strHomeTeam: 'Romania', strAwayTeam: 'Wales', intHomeScore: 2, intAwayScore: 1, dateEvent: '2026-06-06', strTime: '20:45', strHomeTeamBadge: 'https://flagcdn.com/w80/ro.png', strAwayTeamBadge: 'https://flagcdn.com/w80/gb-wls.png', _status: 'live' },
+      { strHomeTeam: 'Germany', strAwayTeam: 'USA', intHomeScore: 1, intAwayScore: 1, dateEvent: '2026-06-06', strTime: '21:30', strHomeTeamBadge: 'https://flagcdn.com/w80/de.png', strAwayTeamBadge: 'https://flagcdn.com/w80/us.png', _status: 'live' },
+      { strHomeTeam: 'Australia', strAwayTeam: 'Switzerland', intHomeScore: 0, intAwayScore: 1, dateEvent: '2026-06-06', strTime: '22:00', strHomeTeamBadge: 'https://flagcdn.com/w80/au.png', strAwayTeamBadge: 'https://flagcdn.com/w80/ch.png', _status: 'live' },
+      { strHomeTeam: 'Bosnia and Herzegovina', strAwayTeam: 'Panama', intHomeScore: 1, intAwayScore: 0, dateEvent: '2026-06-06', strTime: '22:00', strHomeTeamBadge: 'https://flagcdn.com/w80/ba.png', strAwayTeamBadge: 'https://flagcdn.com/w80/pa.png', _status: 'live' },
+      // ⟳ Upcoming
+      { strHomeTeam: 'England', strAwayTeam: 'New Zealand', intHomeScore: null, intAwayScore: null, dateEvent: '2026-06-06', strTime: '23:00', strHomeTeamBadge: 'https://flagcdn.com/w80/gb-eng.png', strAwayTeamBadge: 'https://flagcdn.com/w80/nz.png', _status: 'upcoming' },
+      { strHomeTeam: 'Qatar', strAwayTeam: 'El Salvador', intHomeScore: null, intAwayScore: null, dateEvent: '2026-06-06', strTime: '23:00', strHomeTeamBadge: 'https://flagcdn.com/w80/qa.png', strAwayTeamBadge: 'https://flagcdn.com/w80/sv.png', _status: 'upcoming' },
+      { strHomeTeam: 'Scotland', strAwayTeam: 'Bolivia', intHomeScore: null, intAwayScore: null, dateEvent: '2026-06-06', strTime: '23:00', strHomeTeamBadge: 'https://flagcdn.com/w80/gb-sct.png', strAwayTeamBadge: 'https://flagcdn.com/w80/bo.png', _status: 'upcoming' },
+      { strHomeTeam: 'Cape Verde', strAwayTeam: 'Bermuda', intHomeScore: null, intAwayScore: null, dateEvent: '2026-06-06', strTime: '23:00', strHomeTeamBadge: 'https://flagcdn.com/w80/cv.png', strAwayTeamBadge: 'https://flagcdn.com/w80/bm.png', _status: 'upcoming' },
+    ];
+
+    const WC_FIXTURES = [
+      { strHomeTeam: 'Mexico', strAwayTeam: 'South Africa', intHomeScore: null, intAwayScore: null, dateEvent: '2026-06-11', strTime: '20:00', strHomeTeamBadge: 'https://flagcdn.com/w80/mx.png', strAwayTeamBadge: 'https://flagcdn.com/w80/za.png' },
+      { strHomeTeam: 'Canada', strAwayTeam: 'Bosnia and Herzegovina', intHomeScore: null, intAwayScore: null, dateEvent: '2026-06-12', strTime: '15:00', strHomeTeamBadge: 'https://flagcdn.com/w80/ca.png', strAwayTeamBadge: 'https://flagcdn.com/w80/ba.png' },
+      { strHomeTeam: 'USA', strAwayTeam: 'Paraguay', intHomeScore: null, intAwayScore: null, dateEvent: '2026-06-12', strTime: '21:00', strHomeTeamBadge: 'https://flagcdn.com/w80/us.png', strAwayTeamBadge: 'https://flagcdn.com/w80/py.png' },
+      { strHomeTeam: 'Brazil', strAwayTeam: 'Morocco', intHomeScore: null, intAwayScore: null, dateEvent: '2026-06-13', strTime: '18:00', strHomeTeamBadge: 'https://flagcdn.com/w80/br.png', strAwayTeamBadge: 'https://flagcdn.com/w80/ma.png' },
+      { strHomeTeam: 'Belgium', strAwayTeam: 'Egypt', intHomeScore: null, intAwayScore: null, dateEvent: '2026-06-14', strTime: '20:00', strHomeTeamBadge: 'https://flagcdn.com/w80/be.png', strAwayTeamBadge: 'https://flagcdn.com/w80/eg.png' },
+      { strHomeTeam: 'Spain', strAwayTeam: 'Saudi Arabia', intHomeScore: null, intAwayScore: null, dateEvent: '2026-06-15', strTime: '20:00', strHomeTeamBadge: 'https://flagcdn.com/w80/es.png', strAwayTeamBadge: 'https://flagcdn.com/w80/sa.png' },
+      { strHomeTeam: 'France', strAwayTeam: 'Senegal', intHomeScore: null, intAwayScore: null, dateEvent: '2026-06-16', strTime: '18:00', strHomeTeamBadge: 'https://flagcdn.com/w80/fr.png', strAwayTeamBadge: 'https://flagcdn.com/w80/sn.png' },
+      { strHomeTeam: 'Argentina', strAwayTeam: 'Algeria', intHomeScore: null, intAwayScore: null, dateEvent: '2026-06-16', strTime: '21:00', strHomeTeamBadge: 'https://flagcdn.com/w80/ar.png', strAwayTeamBadge: 'https://flagcdn.com/w80/dz.png' },
+    ];
+
+    const SPORTSDB = 'https://www.thesportsdb.com/api/v1/json/3';
+
+    // Determine match status from TheSportsDB strStatus
+    function parseStatus(ev) {
+      if (ev._status) return ev._status;
+      const st = (ev.strStatus || '').toLowerCase();
+      const hs = ev.intHomeScore, as_ = ev.intAwayScore;
+      const hasScore = hs !== null && hs !== '' && hs !== undefined && hs !== '-' && hs !== '?';
+      if (st.includes('match finished') || st.includes('ft') || st.includes('finished') || st.includes('aet')) return 'finished';
+      if (st.includes('1h') || st.includes('2h') || st.includes('ht') || st.includes('live') || st.includes('progress')) return 'live';
+      if (hasScore) return 'finished';
+      return 'upcoming';
+    }
+
+    function makeMatchCard(ev, leagueLabel, leagueIcon, isFlag = false) {
+      const home = arabicName(ev.strHomeTeam || '');
+      const away = arabicName(ev.strAwayTeam || '');
+      const hs = ev.intHomeScore, as_ = ev.intAwayScore;
+      const hasScore = hs !== null && hs !== '' && hs !== undefined && String(hs) !== '-';
+      const evStatus = parseStatus(ev);
+      const isLive = evStatus === 'live';
+      const isFinished = evStatus === 'finished';
+      const statusCls = isLive ? 'status-live' : isFinished ? 'status-finished' : 'status-upcoming';
+      const statusLabel = isLive ? '● مباشر' : isFinished ? '✓ انتهت' : '⟳ قادمة';
+      const hBadge = ev.strHomeTeamBadge || ev.homeBadge || '';
+      const aBadge = ev.strAwayTeamBadge || ev.awayBadge || '';
+      const logoClass = isFlag ? 'lmc-logo flag-logo' : 'lmc-logo';
+      const hLogoHtml = hBadge ? `<img class="${logoClass}" src="${hBadge}" alt="${home}" onerror="this.style.opacity='.3'">` : `<div style="font-size:3rem">⚽</div>`;
+      const aLogoHtml = aBadge ? `<img class="${logoClass}" src="${aBadge}" alt="${away}" onerror="this.style.opacity='.3'">` : `<div style="font-size:3rem">⚽</div>`;
+      const minuteHtml = isLive ? `<div class="lmc-minute">🔴 ${ev.intTimer || ev.strTime || ''}′</div>` : '';
+      const centerHtml = (hasScore || isLive)
+        ? `<span class="lmc-score">${hasScore ? hs : '-'} - ${hasScore ? as_ : '-'}</span>${minuteHtml}<div class="lmc-meta">${ev.strTime ? ev.strTime.slice(0, 5) : ''} • ${formatDateAr(ev.dateEvent)}</div>`
+        : `<span class="lmc-vs">VS</span><span class="lmc-time">${(ev.strTime || 'TBD').slice(0, 5)}</span><div class="lmc-meta">${formatDateAr(ev.dateEvent)}</div>`;
+      return `<div class="lmc${isLive ? ' live-now' : ''}"><div class="lmc-banner"><span class="lmc-league">${leagueIcon} ${leagueLabel}</span><span class="lmc-status ${statusCls}">${statusLabel}</span></div><div class="lmc-body"><div class="lmc-team">${hLogoHtml}<span class="lmc-name">${home}</span></div><div class="lmc-center">${centerHtml}</div><div class="lmc-team">${aLogoHtml}<span class="lmc-name">${away}</span></div></div></div>`;
+    }
+
+    async function loadMatches(tab) {
+      const container = document.getElementById('matchContainer');
+      container.innerHTML = renderSkeletons(3);
+      let events = [];
+      try {
+        if (tab === 'wc') {
+          renderMatchList(WC_FIXTURES, 'كأس العالم FIFA 2026', '🏆', true, container);
+          return;
+        }
+        if (tab === 'friendly') {
+          // Try TheSportsDB day endpoint for June 6, 2026
+          let loaded = false;
+          try {
+            const r = await fetch(`${SPORTSDB}/eventsday.php?d=2026-06-06&s=Soccer`);
+            const d = await r.json();
+            if (d.events && d.events.length > 0) {
+              // Filter for friendlies/internationals
+              events = d.events.filter(e => {
+                const lg = (e.strLeague || '').toLowerCase();
+                return lg.includes('friendly') || lg.includes('international') || lg.includes('national');
+              });
+              if (!events.length) events = d.events.slice(0, 15);
+              loaded = true;
+            }
+          } catch (e) { console.warn('TheSportsDB day API failed, using local data') }
+          if (!loaded) events = TODAY_FRIENDLIES_JUN6;
+          renderMatchList(events, 'مباريات ودية دولية — 6 يونيو 2026', '🤝', true, container);
+          return;
+        }
+        const ids = { epl: '4328', ucl: '4480' };
+        const labels = { epl: 'الدوري الإنجليزي الممتاز', ucl: 'دوري أبطال أوروبا' };
+        const icons = { epl: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', ucl: '🇪🇺' };
+        const r = await fetch(`${SPORTSDB}/eventspastleague.php?id=${ids[tab]}&s=2025-2026`);
+        const d = await r.json();
+        events = (d.events && d.events.length > 0) ? d.events.slice(-6).reverse() : [];
+        if (!events.length) throw new Error('no data');
+        renderMatchList(events, labels[tab], icons[tab], false, container);
+      } catch (e) {
+        const fallback = {
+          epl: [
+            { strHomeTeam: 'Arsenal', strAwayTeam: 'Aston Villa', intHomeScore: 2, intAwayScore: 1, dateEvent: '2026-05-24', strTime: '', strHomeTeamBadge: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/60px-Arsenal_FC.svg.png', strAwayTeamBadge: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/60px-Aston_Villa_FC_crest_%282016%29.svg.png' },
+            { strHomeTeam: 'Manchester City', strAwayTeam: 'Liverpool', intHomeScore: 1, intAwayScore: 2, dateEvent: '2026-05-24', strTime: '', strHomeTeamBadge: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/60px-Manchester_City_FC_badge.svg.png', strAwayTeamBadge: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Liverpool_FC.svg/60px-Liverpool_FC.svg.png' },
+            { strHomeTeam: 'Chelsea', strAwayTeam: 'Manchester United', intHomeScore: 3, intAwayScore: 0, dateEvent: '2026-05-23', strTime: '', strHomeTeamBadge: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Chelsea_FC.svg/60px-Chelsea_FC.svg.png', strAwayTeamBadge: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/60px-Manchester_United_FC_crest.svg.png' },
+            { strHomeTeam: 'Newcastle United', strAwayTeam: 'Tottenham Hotspur', intHomeScore: 2, intAwayScore: 2, dateEvent: '2026-05-22', strTime: '', strHomeTeamBadge: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Newcastle_United_Logo.svg/60px-Newcastle_United_Logo.svg.png', strAwayTeamBadge: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/60px-Tottenham_Hotspur.svg.png' },
+          ],
+          ucl: [
+            { strHomeTeam: 'Real Madrid', strAwayTeam: 'Arsenal', intHomeScore: 1, intAwayScore: 0, dateEvent: '2026-05-30', strTime: '', strHomeTeamBadge: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/60px-Real_Madrid_CF.svg.png', strAwayTeamBadge: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/60px-Arsenal_FC.svg.png' },
+            { strHomeTeam: 'Arsenal', strAwayTeam: 'Bayern Munich', intHomeScore: 3, intAwayScore: 2, dateEvent: '2026-04-15', strTime: '', strHomeTeamBadge: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/60px-Arsenal_FC.svg.png', strAwayTeamBadge: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282002%E2%80%932017%29.svg/60px-FC_Bayern_M%C3%BCnchen_logo_%282002%E2%80%932017%29.svg.png' },
+          ]
+        };
+        const lbl = { epl: 'الدوري الإنجليزي الممتاز', ucl: 'دوري أبطال أوروبا' };
+        const icn = { epl: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', ucl: '🇪🇺' };
+        renderMatchList(fallback[tab] || [], lbl[tab], icn[tab], false, container);
+      }
+    }
+
+    function renderMatchList(events, label, icon, isFlag, container) {
+      if (!container) container = document.getElementById('matchContainer');
+      if (!events || !events.length) { container.innerHTML = `<div class="no-matches"><span>📭</span>لا توجد مباريات متاحة حالياً</div>`; return }
+      container.innerHTML = events.map(ev => makeMatchCard(ev, label, icon, isFlag)).join('');
+    }
+
+    let currentTab = 'wc';
+    document.querySelectorAll('.mtab').forEach(btn => { btn.addEventListener('click', function () { document.querySelectorAll('.mtab').forEach(b => b.classList.remove('active')); this.classList.add('active'); currentTab = this.dataset.tab; loadMatches(currentTab) }) });
+    document.getElementById('refreshBtn').addEventListener('click', () => loadMatches(currentTab));
+    loadMatches('wc');
+
+    // ══════════════════════════════════════════
+    // FOOTBALL NEWS — with Image Extraction
+    // ══════════════════════════════════════════
+    // Fallback news with real sports images from Unsplash
+    const NEWS_FALLBACK = [
+      { title: 'بلجيكا تُحطم تونس 5-0 في أعتى استعراضات التشوارية قبل كأس العالم', description: 'سحقت بلجيكا تونس بخماسية نظيفة في مباراة ودية بالغة الأهمية، في استعراض قوة لحامل اللقب المحتمل.', link: '#', pubDate: '2026-06-06', thumbnail: 'https://images.unsplash.com/photo-1551854838-212c9aa13b63?w=600&q=80', source: 'كأس العالم', category: 'wc' },
+      { title: 'البرتغال تتصدر 2-0 أمام تشيلي والشوط الثاني يُخيم بتوقع الهدف الثالث', description: 'يقود رونالدو وشركاؤه البرتغال لانتصار في المباراة الودية أمام تشيلي ضمن التحضيرات لكأس العالم 2026.', link: '#', pubDate: '2026-06-06', thumbnail: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80', source: 'FootballNews', category: 'wc' },
+      { title: 'ألمانيا والولايات المتحدة في تعادل مثير 1-1 قبل انطلاق مونديال 2026', description: 'انتهت المباراة الودية المثيرة بين ألمانيا والولايات المتحدة بتعادل 1-1 وسط أجواء احتفالية بمدن المضيفة.', link: '#', pubDate: '2026-06-06', thumbnail: 'https://images.unsplash.com/photo-1540747913346-19212a4b8e0a?w=600&q=80', source: 'DW Arabic', category: 'wc' },
+      { title: 'آرسنال يرفض عروضاً ضخمة للتنازل عن ساكا قبل كأس العالم', description: 'أكدت التقارير أن آرسنال رفض عروضاً مالية كبيرة للتخلي عن نجمه بوكايو ساكا في انتقالات الصيف 2026.', link: '#', pubDate: '2026-06-05', thumbnail: 'https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=600&q=80', source: 'FilGoal', category: 'transfers' },
+      { title: 'الأرجنتين تُعلن قائمتها لكأس العالم 2026 بقيادة ميسي الأسطورة', description: 'أعلن منتخب الأرجنتين قائمته النهائية لكأس العالم 2026 بقيادة ليونيل ميسي لمحاولة الدفاع عن اللقب.', link: '#', pubDate: '2026-06-04', thumbnail: 'https://images.unsplash.com/photo-1487466365202-1afdb86c764e?w=600&q=80', source: 'Goal Arabic', category: 'wc' },
+      { title: 'هالاند يصل معسكر النرويج جاهزاً بعد موسم تاريخي مع مان سيتي', description: 'إرلنغ هالاند، هداف الدوري الإنجليزي بـ27 هدفاً، يصل معسكر النرويج بكامل جاهزيته لمونديال 2026.', link: '#', pubDate: '2026-06-03', thumbnail: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=600&q=80', source: 'Kooora', category: 'results' },
+      { title: 'ريال مدريد يستهدف نجم الدوري الإنجليزي في انتقالات الصيف القادم', description: 'يسعى ريال مدريد لضم أحد نجوم الدوري الإنجليزي الممتاز خلال سوق الانتقالات الصيفية 2026.', link: '#', pubDate: '2026-06-02', thumbnail: 'https://images.unsplash.com/photo-1458914457197-e0cc1f2cf2f0?w=600&q=80', source: 'FilGoal', category: 'transfers' },
+      { title: 'مصر تُعلن قائمتها للمونديال 2026 بقيادة محمد صلاح النجم اللامع', description: 'أعلن اتحاد الكرة المصري قائمة الفراعنة النهائية للمشاركة في كأس العالم 2026 بقيادة محمد صلاح.', link: '#', pubDate: '2026-06-01', thumbnail: 'https://images.unsplash.com/photo-1556816213-354f080d7aa5?w=600&q=80', source: 'BBC Arabic', category: 'wc' },
+      { title: 'إحصائيات مذهلة للدوري الإنجليزي 2025-26 مع تتويج آرسنال بالبطولة', description: 'كشفت إحصائيات الموسم المنتهي للدوري الإنجليزي 2025-26 عن أرقام مذهلة في عدة فئات مع تتويج آرسنال.', link: '#', pubDate: '2026-05-28', thumbnail: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&q=80', source: 'BBC Arabic', category: 'results' },
+    ];
+
+    const NEWS_ICONS = ['⚽', '🏆', '🔄', '⭐', '🌍', '🏅', '🎯', '🔥', '📊'];
+
+    function extractNewsImage(item) {
+      if (item.thumbnail && typeof item.thumbnail === 'string' && item.thumbnail.startsWith('http')) return item.thumbnail;
+      if (item.enclosure?.link) return item.enclosure.link;
+      // Try media content
+      if (item['media:content']?.['@attributes']?.url) return item['media:content']['@attributes'].url;
+      // Extract from content/description
+      const content = item.content || item.description || '';
+      const imgMatch = content.match(/<img[^>]+src=["']([^"']+)["']/i);
+      if (imgMatch && imgMatch[1].startsWith('http')) return imgMatch[1];
+      // OG image pattern
+      const ogMatch = content.match(/https?:\/\/[^\s"'<>]+\.(jpg|jpeg|png|webp)[^\s"'<>]*/i);
+      if (ogMatch) return ogMatch[0];
+      return null;
+    }
+
+    async function loadNews() {
+      const grid = document.getElementById('newsGrid');
+      grid.innerHTML = `<div class="news-loading"><span class="news-loading-anim">⚽</span>جارٍ تحميل أخبار الكرة...</div>`;
+      let items = [];
+      // Try multiple RSS feeds via rss2json (with better URLs and image extraction)
+      const rssFeeds = [
+        { url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ffeeds.bbci.co.uk%2Farabic%2Fsport%2Frss.xml&count=9&api_key=', source: 'BBC Arabic' },
+        { url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.skysports.com%2Frss%2F12040&count=9', source: 'Sky Sports' },
+        { url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.goal.com%2Fen-gb%2Ffeeds%2Fnews%3Ffmt%3Drss&count=9', source: 'Goal.com' },
+        { url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Farabic.eurosport.com%2Frss.xml&count=9', source: 'Eurosport' },
+      ];
+      for (const feed of rssFeeds) {
+        try {
+          const r = await fetch(feed.url);
+          const d = await r.json();
+          if (d.status === 'ok' && d.items && d.items.length > 0) {
+            items = d.items.map(it => ({
+              title: it.title || '',
+              description: (it.description || it.content || '').replace(/<[^>]*>/g, '').slice(0, 200),
+              link: it.link || '#',
+              pubDate: it.pubDate || '',
+              thumbnail: extractNewsImage(it),
+              source: d.feed?.title || feed.source,
+              category: detectCategory(it.title || '')
+            }));
+            if (items.length > 0) break;
           }
-        });
+        } catch (e) { console.warn('RSS feed failed:', feed.source) }
+      }
+      if (!items.length) items = NEWS_FALLBACK;
+      window._allNews = items;
+      renderNews(items);
+    }
+
+    function detectCategory(title) {
+      const t = title.toLowerCase();
+      if (t.includes('كأس العالم') || t.includes('world cup') || t.includes('2026') || t.includes('مونديال')) return 'wc';
+      if (t.includes('صفقة') || t.includes('انتقال') || t.includes('transfer') || t.includes('يضم') || t.includes('ينضم') || t.includes('signing')) return 'transfers';
+      return 'results';
+    }
+
+    function renderNews(items) {
+      const grid = document.getElementById('newsGrid');
+      if (!items || !items.length) { grid.innerHTML = '<div class="news-loading">لا توجد أخبار متاحة</div>'; return }
+      grid.innerHTML = items.slice(0, 9).map((item, i) => {
+        const icon = NEWS_ICONS[i % NEWS_ICONS.length];
+        const dateStr = item.pubDate ? new Date(item.pubDate).toLocaleDateString('ar-EG', { day: 'numeric', month: 'long' }) : '';
+        const hasImg = item.thumbnail && item.thumbnail.startsWith('http');
+        const imgHtml = hasImg
+          ? `<img src="${item.thumbnail}" alt="" class="news-img" loading="lazy" onerror="this.parentElement.innerHTML='<div class=news-img-fallback>${icon}</div>'">`
+          : `<div class="news-img-fallback">${icon}</div>`;
+        return `<div class="news-card" data-ncat="${item.category || 'results'}" data-r>
+<div class="news-img-wrap">${imgHtml}</div>
+<div class="news-body">
+  <span class="news-source-badge">${item.source || 'كرة القدم'}</span>
+  <div class="news-meta"><span>📅 ${dateStr}</span></div>
+  <a href="${item.link}" target="_blank" rel="noopener" class="news-title-link">${item.title}</a>
+  <p class="news-desc">${(item.description || '').slice(0, 140)}...</p>
+  <a href="${item.link}" target="_blank" rel="noopener" class="news-read-btn">اقرأ المزيد →</a>
+</div></div>`;
+      }).join('');
+      document.querySelectorAll('[data-r]:not(.on)').forEach(el => revObs.observe(el));
+    }
+
+    document.querySelectorAll('.ntab').forEach(btn => {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.ntab').forEach(b => b.classList.remove('active')); this.classList.add('active');
+        const f = this.dataset.nfilter; const items = window._allNews || NEWS_FALLBACK;
+        renderNews(f === 'all' ? items : items.filter(n => n.category === f));
       });
     });
+    loadNews();
 
-    // ═══════════════════════════════
-    // CHATBOT
-    // ═══════════════════════════════
+    // ══════════════════════════════════════════
+    // CHATBOT — Puter.js AI (Claude Opus)
+    // ══════════════════════════════════════════
     const chatFab = document.getElementById('chatFab');
-    const chatWin = document.getElementById('chatWin');
+    const chatWin = document.getElementById('chatWindow');
     const chatClose = document.getElementById('chatClose');
+    const clearChat = document.getElementById('clearChat');
     const chatInp = document.getElementById('chatInp');
-    const chatSend = document.getElementById('chatSend');
-    const chatMsgs = document.getElementById('chatMsgs');
+    const chatSendBtn = document.getElementById('chatSendBtn');
+    const chatMsgsEl = document.getElementById('chatMsgs');
+    const chatQuickEl = document.getElementById('chatQuick');
 
     chatFab.addEventListener('click', () => chatWin.classList.toggle('open'));
     chatClose.addEventListener('click', () => chatWin.classList.remove('open'));
 
-    function addMsg(text, isUser) {
-      const div = document.createElement('div');
-      div.className = 'msg ' + (isUser ? 'user' : 'bot');
-      div.innerHTML = `<div class="msg-bubble">${text}</div>`;
-      chatMsgs.appendChild(div);
-      chatMsgs.scrollTop = chatMsgs.scrollHeight;
-    }
-    function showTyping() {
-      const t = document.createElement('div');
-      t.className = 'typing'; t.id = 'typing';
-      t.innerHTML = '<span></span><span></span><span></span>';
-      chatMsgs.appendChild(t);
-      chatMsgs.scrollTop = chatMsgs.scrollHeight;
-      return t;
-    }
+    let chatHistory = [];
+    let isSending = false;
 
-    const SYSTEM_PROMPT = `أنت AMMAR AI، المساعد الذكي لموقع عمار، لاعب محترف مصري في فري فاير وفيفا.
-أجب دائماً بالعربية. كن حماسياً ومتحمساً. استخدم الإيموجي بشكل معتدل.
-معلوماتك الرياضية الحديثة:
-- كأس العالم 2026: 48 منتخب، 12 مجموعة، انطلاق 11 يونيو 2026
-- مصر في المجموعة G مع بلجيكا وإيران ونيوزيلندا
+    const SYSTEM_PROMPT = `أنت "كوتش فوتبول AI"، مساعد كرة قدم ذكي لموقع عمار ياسر، لاعب محترف سوداني من الخرطوم.
+
+🎯 تخصصك: كرة القدم (نتائج، لاعبون، أندية، دوريات، كأس العالم، مباريات اليوم).
+
+📋 معلوماتك المحدّثة (يونيو 2026):
+- مباريات ودية اليوم 6 يونيو 2026:
+  ✓ باراغواي 4-0 نيكاراغوا | السعودية 3-0 بورتو ريكو | أيرلندا 1-1 كندا | هايتي 1-2 بيرو | فلسطين 0-0 قيرغيزستان | بلجيكا 5-0 تونس
+  🔴 البرتغال 2-0 تشيلي (مباشر) | رومانيا 2-1 ويلز (مباشر) | ألمانيا 1-1 الولايات المتحدة (مباشر) | أستراليا 0-1 سويسرا (مباشر) | البوسنة 1-0 بنما (مباشر)
+  ⟳ إنجلترا vs نيوزيلندا | قطر vs السلفادور | اسكتلندا vs بوليفيا | الرأس الأخضر vs برمودا (23:00)
+- كأس العالم 2026: 11 يونيو – 19 يوليو، USA+كندا+المكسيك، 48 منتخب، 12 مجموعة
+- الافتتاح: المكسيك vs جنوب أفريقيا، الأزتيكي، 11 يونيو
 - آرسنال بطل الدوري الإنجليزي 2025-26 بـ89 نقطة
-- هالاند هداف الدوري بـ27 هدفاً
-- الأرجنتين حاملة لقب كأس العالم (مجموعة J)
-- الموسم الجديد للدوري الإنجليزي يبدأ 22 أغسطس 2026`;
+- هالاند هداف الدوري بـ27 هدف (مان سيتي)
+- مصر المجموعة G مع بلجيكا وإيران ونيوزيلندا
+- الأرجنتين حاملة اللقب في المجموعة J مع الجزائر والنمسا والأردن
+- عمار ياسر: لاعب سوداني محترف من الخرطوم 🇸🇩، فري فاير وفيفا
 
-    async function sendChat() {
-      const text = chatInp.value.trim();
-      if (!text) return;
-      addMsg(text, true);
-      chatInp.value = '';
-      // Hide suggestions after first message
-      const sugg = document.getElementById('chatSuggestions');
-      if (sugg) sugg.style.display = 'none';
+🔍 لأسئلة خارج الكورة تماماً: أجب بـ ##GOOGLE##search query## فقط.
+💬 أسلوبك: عربي حماسي، إيموجي باعتدال، إجابات مختصرة (3-5 جمل).`;
 
-      const typing = showTyping();
+    clearChat.addEventListener('click', () => {
+      chatHistory = [];
+      chatMsgsEl.innerHTML = `<div class="msg bot"><div class="msg-label">🤖 كوتش AI</div><div class="msg-bubble">تم مسح المحادثة! ابدأ من جديد 🔄⚽</div></div>`;
+      chatQuickEl.style.display = '';
+    });
+
+    function getTime() { const n = new Date(); return n.getHours().toString().padStart(2, '0') + ':' + n.getMinutes().toString().padStart(2, '0') }
+
+    function addMessage(text, isUser) {
+      const d = document.createElement('div'); d.className = 'msg ' + (isUser ? 'user' : 'bot');
+      const label = isUser ? `<div class="msg-label" style="justify-content:flex-end">أنت 👤</div>` : `<div class="msg-label">🤖 كوتش AI</div>`;
+      const html = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+      d.innerHTML = `${label}<div class="msg-bubble">${html}</div><div class="msg-time">${getTime()}</div>`;
+      chatMsgsEl.appendChild(d); chatMsgsEl.scrollTop = chatMsgsEl.scrollHeight; return d;
+    }
+
+    function showTyping() {
+      const d = document.createElement('div'); d.className = 'typing-bub'; d.id = 'typingBub';
+      d.innerHTML = '<span class="td"></span><span class="td"></span><span class="td"></span>';
+      chatMsgsEl.appendChild(d); chatMsgsEl.scrollTop = chatMsgsEl.scrollHeight; return d;
+    }
+
+    function showThinking() {
+      const d = document.createElement('div'); d.className = 'ai-thinking'; d.id = 'thinkingEl';
+      d.innerHTML = `<span class="ai-think-icon">🧠</span><span class="ai-think-text">Claude Opus يفكر...</span>`;
+      chatMsgsEl.appendChild(d); chatMsgsEl.scrollTop = chatMsgsEl.scrollHeight; return d;
+    }
+
+    function showGoogleCard(rawQuery) {
+      const query = rawQuery.trim().replace(/['"]/g, '');
+      const d = document.createElement('div'); d.className = 'google-card';
+      d.innerHTML = `<span class="google-icon">🔍</span><div class="google-card-text"><strong>فتح نتائج جوجل</strong><span>${query}</span></div>`;
+      d.addEventListener('click', () => { window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}&hl=ar`, '_blank') });
+      chatMsgsEl.appendChild(d); chatMsgsEl.scrollTop = chatMsgsEl.scrollHeight;
+    }
+
+    // Extract text from various Puter.js response formats
+    function extractPuterText(response) {
+      if (!response) return '';
+      if (typeof response === 'string') return response;
+      // Standard Puter.js message format
+      if (response.message) {
+        const m = response.message;
+        if (typeof m === 'string') return m;
+        if (m.content) {
+          if (typeof m.content === 'string') return m.content;
+          if (Array.isArray(m.content)) return m.content.filter(b => b.type === 'text').map(b => b.text || '').join('\n');
+        }
+        if (m.text) return m.text;
+      }
+      // Anthropic-style content array
+      if (Array.isArray(response.content)) return response.content.filter(b => b.type === 'text').map(b => b.text || '').join('\n');
+      if (typeof response.content === 'string') return response.content;
+      if (response.text) return response.text;
+      // toString fallback
+      try { return String(response) } catch (e) { return '' }
+    }
+
+    // Normalize chatHistory messages for Puter.js (ensure content is always a string)
+    function buildPuterMessages() {
+      return [
+        { role: 'system', content: SYSTEM_PROMPT },
+        ...chatHistory.map(m => ({
+          role: m.role,
+          content: Array.isArray(m.content)
+            ? m.content.filter(b => b.type === 'text').map(b => b.text || '').join('\n')
+            : String(m.content || '')
+        }))
+      ];
+    }
+
+    async function sendMessage(userMsg) {
+      if (isSending || !userMsg.trim()) return;
+      isSending = true;
+      chatSendBtn.disabled = true;
+      chatQuickEl.style.display = 'none';
+      addMessage(userMsg, true);
+      chatHistory.push({ role: 'user', content: userMsg });
+      const typEl = showTyping();
+      let thinkEl = null;
+
       try {
-        if (typeof puter !== 'undefined' && puter.ai) {
-          const res = await puter.ai.chat(
-            [{ role: 'system', content: SYSTEM_PROMPT }, { role: 'user', content: text }],
-            { model: 'gpt-4o' }
-          );
-          typing.remove();
-          addMsg(res.message?.content || res, false);
+        // Show thinking after 1s
+        const thinkTimer = setTimeout(() => {
+          if (typEl.parentNode) typEl.remove();
+          thinkEl = showThinking();
+        }, 1000);
+
+        const messages = buildPuterMessages();
+
+        // Call Puter.js AI with Claude Opus 4.5
+        const response = await puter.ai.chat(messages, {
+          model: 'claude-opus-4-5',
+          max_tokens: 1024
+        });
+
+        clearTimeout(thinkTimer);
+        if (typEl.parentNode) typEl.remove();
+        if (thinkEl && thinkEl.parentNode) thinkEl.remove();
+
+        const text = extractPuterText(response).trim();
+
+        if (!text) {
+          addMessage('حدث خطأ في معالجة الرد. حاول مرة أخرى! ⚡', false);
+          return;
+        }
+
+        const googleMatch = text.match(/##GOOGLE##([^#]+)##/);
+        if (googleMatch) {
+          const cleanText = text.replace(/##GOOGLE##[^#]+##/g, '').trim();
+          if (cleanText) addMessage(cleanText, false);
+          else addMessage('موضوع خارج تخصصي، لكن جوجل سيساعدك! 🔍', false);
+          showGoogleCard(googleMatch[1]);
         } else {
-          throw new Error('puter not available');
+          addMessage(text, false);
+          chatHistory.push({ role: 'assistant', content: text });
         }
-      } catch (e) {
-        typing.remove();
+      } catch (err) {
+        if (typEl && typEl.parentNode) typEl.remove();
+        if (thinkEl && thinkEl.parentNode) thinkEl.remove();
+        console.error('Puter AI error:', err);
+
         // Smart Arabic fallbacks
-        const lower = text.toLowerCase();
+        const low = userMsg.toLowerCase();
         const fallbacks = [
-          [['مصر', 'egypt', 'فراعنة'], `مصر في المجموعة G مع بلجيكا 🇧🇪 وإيران 🇮🇷 ونيوزيلندا 🇳🇿! الفراعنة قادمون بقوة! 🇪🇬🔥 نتمنى لهم التأهل إلى دور الـ32 إن شاء الله! 💪`],
-          [['أرجنتين', 'مبيسي', 'ميسي'], `الأرجنتين حاملة اللقب الحالية ⭐⭐⭐! في المجموعة J مع الجزائر والنمسا والأردن. ميسي أسطورة الكورة! 🐐 هل يفوزون للمرة الرابعة؟ 🏆`],
-          [['فري فاير', 'free fire'], `فري فاير لعبة أسطورية! 🔥 أنا من أفضل لاعبيها في مصر. تيبسي الأساسية: تحسين الـHeadshot + الحركة السريعة + اختيار الموقع الصح. تدرب يومياً! 💪🎮`],
-          [['فيفا', 'fifa'], `الفيفا عشق من الطفولة! ⚽ الآن كأس العالم 2026 قادم بعد 7 أيام فقط! أنا حامس جداً لمجموعة مصر! 🇪🇬 هتشجع مين؟`],
-          [['آرسنال', 'arsenal'], `آرسنال بطل الدوري الإنجليزي 2025-26! 🏆🔴 89 نقطة، 27 فوز! أداء مذهل من المدفعجية! الموسم القادم يبدأ 22 أغسطس 2026. 💪`],
-          [['هالاند', 'haaland'], `إرلنغ هالاند أكلة الأهداف! 😱 27 هدف في الدوري الإنجليزي 2025-26 وهداف الموسم! رجل سوبر! ⚽🔥`],
-          [['كأس العالم', 'world cup', '2026'], `كأس العالم 2026 ينطلق بعد 7 أيام فقط! 🎉 48 منتخب في 12 مجموعة! الافتتاح في مكسيكو سيتي. مصر في المجموعة G! أتمنى نجاح الفراعنة! 🇪🇬🏆`],
+          [['مباريات اليوم', 'اليوم', 'نتائج اليوم', 'june 6', '6 يونيو'],
+            'نتائج اليوم 6 يونيو 2026 🔴\n✓ بلجيكا 5-0 تونس | باراغواي 4-0 نيكاراغوا | السعودية 3-0 بورتو ريكو\n🔴 مباشر: البرتغال 2-0 تشيلي | ألمانيا 1-1 USA | البوسنة 1-0 بنما\n⟳ قادم: إنجلترا vs نيوزيلندا | قطر vs السلفادور (23:00)'],
+          [['مصر', 'egypt', 'فراعنة', 'صلاح'], 'مصر في المجموعة G مع بلجيكا 🇧🇪 وإيران 🇮🇷 ونيوزيلندا 🇳🇿! الفراعنة جاهزون بقيادة صلاح! 🇪🇬🔥'],
+          [['أرجنتين', 'ميسي', 'argentina'], 'الأرجنتين حاملة اللقب ⭐⭐⭐ في المجموعة J مع الجزائر والنمسا والأردن! ميسي يسعى للثالثة! 🐐🏆'],
+          [['سودان', '🇸🇩'], 'السودان 🇸🇩 لم يتأهل للمونديال 2026 للأسف، لكن عمار ياسر موجود يشجع! 💪🎮'],
+          [['آرسنال', 'arsenal'], 'آرسنال بطل الدوري الإنجليزي 2025-26 بـ89 نقطة و27 فوز! إنجاز رائع! 🏆🔴'],
+          [['هالاند', 'haaland'], 'هالاند هداف الدوري بـ27 هدف 😱 آلة الأهداف النرويجية! ⚽🔥'],
+          [['كأس العالم', 'world cup', '2026', 'مونديال'], 'كأس العالم 2026 ينطلق 11 يونيو! 🎉 48 منتخب • 12 مجموعة • الافتتاح: المكسيك vs جنوب أفريقيا بالأزتيكي! 🏆🌍'],
+          [['برازيل', 'brazil'], 'البرازيل في المجموعة C مع المغرب وهايتي واسكتلندا! السيليساو مرشحة قوية! 🇧🇷⭐'],
+          [['فرنسا', 'france', 'مبابي'], 'فرنسا في المجموعة I مع السنغال والعراق والنرويج! مبابي يتطلع للقب! 🇫🇷⭐'],
+          [['بلجيكا', 'belgium'], 'بلجيكا سحقت تونس 5-0 اليوم وهي في المجموعة G مع مصر! استعراض قوة رائع! 🇧🇪🔥'],
+          [['ألمانيا', 'germany', 'usa', 'امريكا'], 'ألمانيا والولايات المتحدة تعادلتا 1-1 في مباراة ودية مثيرة اليوم! 🇩🇪🇺🇸⚽'],
         ];
-        let reply = `سؤال رائع! 🎮 أنا هنا لمساعدتك في كل ما يخص الألعاب والكورة وكأس العالم 2026! اسألني عن مجموعة مصر أو فري فاير أو الدوري الإنجليزي! ⚡`;
+        let reply = 'سؤال رائع عن الكورة! 🎮⚽ اسألني عن نتائج اليوم، كأس العالم 2026، أو الدوري الإنجليزي! 🌍';
         for (const [keys, ans] of fallbacks) {
-          if (keys.some(k => lower.includes(k) || text.includes(k))) { reply = ans; break; }
+          if (keys.some(k => low.includes(k) || userMsg.includes(k))) { reply = ans; break }
         }
-        addMsg(reply, false);
+        addMessage(reply, false);
+      } finally {
+        isSending = false;
+        chatSendBtn.disabled = false;
       }
     }
 
-    function sendSuggestion(btn) {
-      chatInp.value = btn.textContent;
-      sendChat();
-    }
+    function sendQuick(btn) { chatInp.value = btn.textContent.trim(); sendMessage(chatInp.value); chatInp.value = '' }
 
-    chatSend.addEventListener('click', sendChat);
-    chatInp.addEventListener('keydown', e => { if (e.key === 'Enter') sendChat(); });
-
-    // ═══════════════════════════════
-    // HEADER SCROLL EFFECT
-    // ═══════════════════════════════
-    window.addEventListener('scroll', () => {
-      const hdr = document.getElementById('hdr');
-      hdr.style.background = window.scrollY > 50
-        ? 'rgba(0,5,15,0.97)'
-        : 'rgba(0,5,15,0.8)';
-    });
-
-    // PARTICLES
-    const hero = document.querySelector('.hero');
-    for (let i = 0; i < 30; i++) {
-      const p = document.createElement('div');
-      const size = 1 + Math.random() * 3;
-      p.style.cssText = `
-    position:absolute;
-    width:${size}px;height:${size}px;
-    background:${Math.random() > .5 ? '#00aaff' : '#00ffea'};
-    border-radius:50%;
-    left:${Math.random() * 100}%;
-    top:${Math.random() * 100}%;
-    opacity:${.2 + Math.random() * .6};
-    animation:floatP ${4 + Math.random() * 10}s linear ${Math.random() * 5}s infinite;
-    pointer-events:none;z-index:1;
-    box-shadow:0 0 ${size * 3}px currentColor;
-  `;
-      hero.appendChild(p);
-    }
-    const style = document.createElement('style');
-    style.textContent = `
-@keyframes floatP{
-  0%{transform:translateY(0) translateX(0);opacity:0}
-  10%{opacity:.8}
-  90%{opacity:.4}
-  100%{transform:translateY(-80px) translateX(${Math.random() > 0.5 ? '20' : '-20'}px);opacity:0}
-}`;
-    document.head.appendChild(style);
+    chatSendBtn.addEventListener('click', () => { sendMessage(chatInp.value.trim()); chatInp.value = '' });
+    chatInp.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(chatInp.value.trim()); chatInp.value = '' } });
   </script>
+
+  <!-- Puter.js AI — Free AI API (Claude Opus 4.5) -->
+  <script src="https://js.puter.com/v2/"></script>
 </body>
 
 </html>
